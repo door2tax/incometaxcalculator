@@ -1,0 +1,204 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #1065c0; white-space: nowrap;  font-size: 3vw;">Computation of Income from House Property with Steps</div>
+
+<h3  style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+          
+<form Name="ifhp">
+  <tr>
+    <th> Let out or Self-occupied : </th>
+    <td><select Name="lo">
+      <option selected>Let out</option>
+      <option>Self-occupied</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th> Municipal value (p.a.) : </th>
+    <td><Input Type="text" Name="mv"></td>
+  </tr>
+  <tr>
+    <th> Fair Rental value (p.a.) : </th>
+    <td><Input Type="text" Name="frv"></td>
+  </tr>
+  <tr>
+    <th> Standard Rent (p.a.) : </th>
+    <td><Input Type="text" Name="sr"></td>
+ </tr>
+ <tr>
+    <th> Actual Rent (per Month) : </th>
+    <td><Input Type="text" Name="ar"></td>
+  </tr>
+   <tr>
+    <th> Unrealised Rent (Total) : </th>
+    <td><Input Type="text" Name="ur"></td>
+  </tr>
+    <tr>
+    <th> Let Out Period (in Months) : </th>
+    <td><Select Name="lop">
+<Option>1</option>
+<Option>2</option>
+<Option>3</option>
+<Option>4</option>
+<Option>5</option>
+<Option>6</option>
+<Option>7</option>
+<Option>8</option>
+<Option>9</option>
+<Option>10</option>
+<Option>11</option>
+<Option selected>12</option>
+</Select>
+    </td>
+  </tr>
+   <tr>
+    <th> Vacancy Period (in Months) : </th>
+    <td>
+      <Select Name="vp">
+<Option selected>0</option>       
+<Option>1</option>
+<Option>2</option>
+<Option>3</option>
+<Option>4</option>
+<Option>5</option>
+<Option>6</option>
+<Option>7</option>
+<Option>8</option>
+<Option>9</option>
+<Option>10</option>
+<Option>11</option>
+<Option>12</option>
+</Select></td>
+  </tr>
+<tr>
+    <th> Municipal Tax paid by the Owner : </th>
+    <td> (In Percentage: )<Input Type="text" Name="mtp"><br><br>OR<br><br>(In Amount: )<Input Type="text" Name="mta"></td>
+</tr>
+ <tr>
+    <th> Municipal Tax paid by the Tenant : </th>
+    <td><Input Type="text" Name="mtt"></td>
+</tr>
+ <tr>
+    <th> Interest on borrowed capital : </th>
+    <td><Input Type="text" Name="i"></td>
+</tr>
+  <tr>
+<th colspan="2">
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="GAV()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+ <tr>
+    <th> Gross Annual value : </th>
+    <td><Input Type="text" Name="gav"></td>
+</tr>
+ <tr>
+    <th> Net Annual value : </th>
+    <td><Input Type="text" Name="nav"></td>
+</tr>
+ <tr>
+    <th> Income from House Property : </th>
+    <td><Input Type="text" Name="ihp"></td>
+</tr>
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="20" cols="100">
+</textarea>
+</td>
+</tr>
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<script Language="Javascript">
+function GAV()
+{
+var frv, mv, x1, sr, er, lop, vp, ur, ar, arv, gav, mtp, mta, mtt, lmt, nav, asd, ihp1, i, ihp2;
+lop = Number(document.ifhp.lop.value);
+frv = Number(document.ifhp.frv.value) / 12*lop;
+mv = Number(document.ifhp.mv.value) / 12*lop;
+sr = Number(document.ifhp.sr.value) / 12*lop;
+vp = Number(document.ifhp.vp.value);
+ur = Number(document.ifhp.ur.value);
+ar = Number(document.ifhp.ar.value) * lop;
+arv = Number(document.ifhp.ar.value) * (lop-vp);
+mtp = Number(document.ifhp.mtp.value);
+mta = Number(document.ifhp.mta.value);
+mtt = Number(document.ifhp.mtt.value);
+i = Number(document.ifhp.i.value);
+
+if (document.ifhp.lo.value == "Self-occupied") {gav="Nil"; nav="Nil";
+document.ifhp.gav.value = gav;
+document.ifhp.nav.value = nav;
+document.ifhp.ihp.value = 0-i; 
+document.ifhp.steps.value = "Since, It is a self-occupied house, Net Annual Value is Nil. \n\nNet Annual Value (NAV) = Nil \n Less : Interest on loan = " + i + "\nLoss from House Property = " + (0-i);}
+
+else {
+x1 = Math.max(frv, mv); 
+if (x1=="" || sr=="") {er=Math.max(x1, sr); }
+else {er=Math.min(x1, sr); }
+if (vp=="0") {gav = Math.max(er, ar); document.ifhp.gav.value = gav; }
+else {if (ar>er) {gav=arv; document.ifhp.gav.value = gav; } 
+      else {gav=er; document.ifhp.gav.value = gav; } }
+
+if (mtp=="") {lmt=mta-mtt; }
+else {lmt=(mv*mtp/100)-mtt; }
+nav = gav - lmt - ur;
+document.ifhp.nav.value = nav;
+asd = nav*30/100;
+ihp1 = nav-asd;
+ihp2 = ihp1-i;
+document.ifhp.ihp.value = ihp2;
+
+document.ifhp.steps.value = "Municipal Value = " + mv + "\nFair Rental Value = " + frv + "\n Whichever is higher = " + x1 + "\nStandard Rent = " + sr + "\n Whichever is Lower = Expected Rent = " + er + "\n\nTherefore Expected Rent = " + er +  "\nActual Rent receivable = " + ar*lop + "\nAcual rent received subject to vacancy = " + ar*(lop-vp) + "\n Higher of Expected Rent and Actual Rent received/receivable = Gross Annual Value = " + gav + "\n\nTherefore Gross Annual Value (GAV) = " + gav + "\n Less : Municipal Tax paid by the owner = " + lmt + "\n Less : Unrealised Rent = " + ur + "\nNet Annual Value (NAV) = " + nav + "\n Less : Standard Deduction (30% of NAV) = " + asd +"\n Less : Interest on loan = " + i + "\nIncome from House Property = " + ihp2;
+}
+}
+</script>
+
+</body>
+</html>

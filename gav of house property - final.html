@@ -1,0 +1,151 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #0747a1; white-space: nowrap;  font-size: 3vw;">Computation of Gross Annual Value of House Property with Steps</div>
+
+<h3  style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<form Name="ifhp">
+  <tr>
+    <th> Municipal value (p.a.) : </th>
+    <td><Input Type="text" Name="mv"></td>
+  </tr>
+  <tr>
+    <th> Fair Rental value (p.a.): </th>
+    <td><Input Type="text" Name="frv"></td>
+  </tr>
+  <tr>
+    <th> Standard Rent (p.a.): </th>
+    <td><Input Type="text" Name="sr"></td>
+ </tr>
+ <tr>
+    <th> Actual Rent (per Month) : </th>
+    <td><Input Type="text" Name="ar"></td>
+  </tr>
+    <tr>
+    <th> Let Out Period (in Months) : </th>
+    <td><Select Name="lop">
+<Option>1</option>
+<Option>2</option>
+<Option>3</option>
+<Option>4</option>
+<Option>5</option>
+<Option>6</option>
+<Option>7</option>
+<Option>8</option>
+<Option>9</option>
+<Option>10</option>
+<Option>11</option>
+<Option selected>12</option>
+</Select>
+    </td>
+  </tr>
+   <tr>
+    <th> Vacancy Period (in Months) : </th>
+    <td>
+      <Select Name="vp">
+<Option selected>0</option>       
+<Option>1</option>
+<Option>2</option>
+<Option>3</option>
+<Option>4</option>
+<Option>5</option>
+<Option>6</option>
+<Option>7</option>
+<Option>8</option>
+<Option>9</option>
+<Option>10</option>
+<Option>11</option>
+<Option>12</option>
+</Select></td>
+  </tr>
+
+  <tr>
+<th colspan="2">
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="GAV()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+ <tr>
+    <th> Gross Annual value : </th>
+    <td><Input Type="text" Name="gav"></td>
+</tr>
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="20" cols="100">
+</textarea>
+</td>
+</tr>
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<script Language="Javascript">
+function GAV()
+{
+var frv, mv, x1, sr, er, lop, vp, ar, arv, gav;
+lop = Number(document.ifhp.lop.value);
+frv = Number(document.ifhp.frv.value) / 12*lop;
+mv = Number(document.ifhp.mv.value) / 12*lop;
+sr = Number(document.ifhp.sr.value) / 12*lop;
+vp = Number(document.ifhp.vp.value);
+ar = Number(document.ifhp.ar.value) * lop;
+arv = Number(document.ifhp.ar.value) * (lop-vp);
+
+x1 = Math.max(frv, mv); 
+if (x1=="" || sr=="") {er=Math.max(x1, sr); }
+else {er=Math.min(x1, sr); }
+if (vp=="0") {gav = Math.max(er, ar); document.ifhp.gav.value = gav; }
+else {if (ar>er) {gav=arv; document.ifhp.gav.value = gav; } 
+      else {gav=er; document.ifhp.gav.value = gav; } }
+      document.ifhp.steps.value = "Municipal Value = " + mv + "\nFair Rental Value = " + frv + "\n Whichever is higher = " + x1 + "\nStandard Rent = " + sr + "\n Whichever is Lower = Expected Rent = " + er + "\n\nTherefore Expected Rent = " + er +  "\nActual Rent receivable = " + ar*lop + "\nAcual rent received subject to vacancy = " + ar*(lop-vp) + "\n Higher of Expected Rent and Actual Rent received/receivable = Gross Annual Value = " + gav + "\n\nTherefore Gross Annual Value (GAV) = " + gav;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<html><head><style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+
+</style>
+
+</head><body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #fe1e50; white-space: nowrap;  font-size: 3vw;">Computation of Value of Rent Free Accommodation with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+       
+<form name="ifs">
+
+<tr>
+  <th>Employment : </th>
+  <td colspan="2">
+<select name="govtemployee">
+  <option>Government Employee</option>
+  <option selected="">Other Employee</option>
+</select></td>
+</tr>
+
+<tr>
+  <th>Service Period : </th>
+  <td colspan="2">
+<select name="sp">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option selected="">12</option>
+</select></td>
+</tr>
+
+<tr>
+<th>Basic Salary (per month) : </th>
+<td colspan="2">
+<input type="text" name="bsreceived">
+</td>
+</tr>
+
+<tr>
+<th>Commission (per month) : </th>
+<td colspan="2"> As a fixed percentage of turnover: <input type="text" name="creceived"> <br><br> Not as a fixed percentage of turnover: <input type="text" name="cnot">
+</td>
+</tr>
+
+<tr>
+<th>Bonus (per month) : </th>
+<td colspan="2">
+<input type="text" name="b">
+</td>
+</tr>
+
+<tr>
+
+<th colspan="3">Allowances : </th>
+
+</tr>
+
+<tr>
+<th>Dearness Allowance  (per month) : </th>
+<td colspan="2">If provided in terms of employment: <input type="text" name="dareceived"> <br><br> Not provided in terms of employment: <input type="text" name="danot"></td>
+</tr>
+
+<tr>
+  <th colspan="3"><br></th>
+</tr>
+
+<tr>
+<th rowspan="5">House Rent Allowance : </th>
+<td>
+House Rent Allowance (per month) : </td> <td> 
+<input type="text" name="hrareceived">
+</td>
+</tr>
+
+<tr>
+<td>Rent Paid (per month) : </td>
+<td>
+<input type="text" name="rpaid">
+</td>
+</tr>
+
+<tr>
+<td>Months during which the accommodation was occupied : </td>
+<td>
+<select name="noofmonths">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option selected="">12</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Place of accommodation : </td>
+<td>
+<select name="poa">
+<option>Metro Cities (i.e. Delhi, Kolkata, Mumbai, Chennai)</option>
+<option>Other Cities</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Accommodation in Own house or Rented house : </td>
+<td>
+<select name="art">
+<option selected="">Rented House</option>
+<option>Own house</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+  <th colspan="3"><br></th>
+</tr>
+
+<tr>
+  <th>Children Education Allowance (per month) : </th>
+  <td><input type="text" name="cea"></td>
+  <td rowspan="2">Number of Children :
+  <select name="noofc">
+<option>0</option>
+<option>1</option>
+<option selected="">2</option>
+<option>More Than 2</option>
+</select> </td>
+</tr>
+
+<tr>
+  <th>Children Hostel Allowance (per month) : </th>
+  <td><input type="text" name="cha"></td>
+</tr>
+
+<tr>
+  <th>Transport Allowance (per month) : </th>
+  <td><input type="text" name="ta"></td>
+    <td>Is the person Blind or Deaf and Dumb or orthopedically handicapped : 
+    <select name="bdd">
+    <option>Yes</option>
+    <option selected="">No</option>
+    </select>
+  </td>
+</tr>
+
+<tr>
+  <th>Entertainment Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="ea"></td>
+</tr>
+
+<tr>
+  <th>Fixed Medical Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="fixedmedicala"></td>
+</tr>
+
+<tr>
+  <th>Tiffin/Lunch Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="tiffina"></td>
+</tr>
+
+<tr>
+  <th>Servant Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="servanta"></td>
+</tr>
+
+<tr>
+  <th>Non - Practicing Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="nonpracticinga"></td>
+</tr>
+
+<tr>
+  <th>Warden Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="wardena"></td>
+</tr>
+
+<tr>
+  <th>Interim Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="interima"></td>
+</tr> 
+
+<tr>
+  <th>Project Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="projecta"></td>
+</tr>
+
+<tr>
+  <th>Over-time Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="overtimea"></td>
+</tr>
+
+<tr>
+  <th>City Compensatory Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="citycompensatorya"></td>
+</tr>
+
+<tr>
+  <th>Daily Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="dailya">
+      <br><br> Expenditure actually spent : <input type="text" name="edailya"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Travelling Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="travellinga">
+      <br><br> Expenditure actually spent : <input type="text" name="etravellinga"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Conveyance Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="conveyancea">
+      <br><br> Expenditure actually spent : <input type="text" name="econveyancea"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Helper Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="helpera">
+      <br><br> Expenditure actually spent : <input type="text" name="ehelpera"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Uniform Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="uniforma">
+      <br><br> Expenditure actually spent : <input type="text" name="euniforma"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Academic Research Allowance (per month) : </th>
+  <td colspan="2">Amount received (per month) : <input type="text" name="academicresearcha">
+      <br><br> Expenditure actually spent : <input type="text" name="eacademicresearcha"> 
+  </td>
+</tr>
+
+<tr>
+  <th>Underground Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="ua"></td>
+</tr>
+
+<tr>
+  <th>Special Compensatory (Tribal Area/Schedule Areas) Allowance (per month) : </th>
+  <td colspan="2"><input type="text" name="taa"></td>
+</tr>
+
+
+<tr>
+  <th colspan="3">Taxable Perquisites : </th>
+</tr>
+
+<tr>
+  <th rowspan="9">Rent Free Accommodation : </th>
+
+  <td colspan="2">
+  Accomodation : <select name="rfaccommodation">
+<option>Accommodation is provided by the Government to the employee</option>
+    <option>Accommodation is provided by any other employer and the accommodation is owned by the employer</option>
+<option>Accommodation is provided by any other employer and the accommodation is taken on lease/rent by the employer</option>
+<option>Accommodation is provided by any employer in a hotel and such accommodation not exceeds 15 days on his transfer</option><option>Accommodation is provided by any employer in a hotel and such accommodation exceeds 15 days on his transfer</option>
+  </select></td></tr>
+
+<tr><td>Accommodation Period (in months) : </td><td>
+<select name="accommodationp">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option selected="">12</option>
+</select></td></tr>
+
+ <tr><td> License fee determined by the Government (per month) : </td><td><input type="text" name="licensefee"></td></tr>
+
+
+ <tr><td> Population of the city : </td><td> <select name="population">
+    <option>Above 25 Lakh</option>
+    <option>From 10 Lakh to 25 Lakh</option>
+<option>Below 10 Lakh</option>
+  </select></td></tr>
+
+ <tr><td> Lease rental (per month) or Hotel rent paid by the employer : </td><td><input type="text" name="leaserent"></td></tr>
+
+  <tr><td> Rent recovered from the employee (per month) : </td><td><input type="text" name="recoveredrent"></td></tr>
+
+<tr><td colspan="2">   For Furnished accommodation :  </td></tr>
+ <tr><td>   Cost of furniture, etc (Written down value): </td><td><input type="text" name="costoff"></td></tr>
+ <tr><td>   Hire charges paid for furniture, etc (per month) : </td><td><input type="text" name="hireoff"></td></tr>
+
+<tr>
+  <th colspan="3"><br></th>
+</tr>
+
+<tr>
+<th colspan="3">
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><input type="reset" value="Reset Details"></div>
+<br>
+
+</form>
+
+<form name="ifsans">
+
+
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><input type="button" value="Calculate" onclick="IFS()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: blue;"><input type="reset" value="Reset Answer"></div>
+</th>
+</tr>
+
+<tr>
+<th>Value of Rent Free Accommodation : </th>
+<td colspan="2">
+<input type="text" name="gs">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td colspan="2">
+<textarea name="ifssteps" rows="15" cols="100"></textarea>
+</td>
+</tr>
+
+<tr>
+  <th colspan="3"><br></th>
+</tr>
+
+<tr>
+<th>Note : </th>
+<td colspan="2">
+<textarea name="note" rows="5" cols="100"></textarea>
+</td>
+</tr>
+
+</form>
+
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<script language="JavaScript">
+
+function IFS()
+{
+if (document.ifs.art.value == "Rented House")
+{
+if (document.ifs.poa.value == "Metro Cities (i.e. Delhi, Kolkata, Mumbai, Chennai)")
+{
+var bs,da, c, s, nom, hrar, rp, x1, x2, x3, x4, ehra, ehra1, aehra;
+bs = Number(document.ifs.bsreceived.value);
+da = Number(document.ifs.dareceived.value);
+c = Number(document.ifs.creceived.value);
+nom = Number(document.ifs.noofmonths.value);
+s = (bs + da+ c);
+hrar = Number(document.ifs.hrareceived.value);
+rp = Number(document.ifs.rpaid.value);
+x1 = hrar * nom;
+x2 = (rp * nom) - (.10 * s * nom);
+x3 = .50 * s * nom;
+x4 = 0;
+ehra = Math.min(x1, x2, x3);
+ehra1 = Math.max(ehra, x4);
+aehra = x1 - ehra1;
+}
+else 
+{
+var bs,da, c, s, nom, hrar, rp, x1, x2, x3, x4, ehra, ehra1, aehra;
+bs = Number(document.ifs.bsreceived.value);
+da = Number(document.ifs.dareceived.value);
+c = Number(document.ifs.creceived.value);
+nom = Number(document.ifs.noofmonths.value);
+s = (bs + da+ c);
+hrar = Number(document.ifs.hrareceived.value);
+rp = Number(document.ifs.rpaid.value);
+x1 = hrar * nom;
+x2 = (rp * nom) - (.10 * s * nom);
+x3 = .40 * s * nom;
+x4 = 0;
+ehra = Math.min(x1, x2, x3);
+ehra1 = Math.max(ehra, x4);
+aehra = x1 - ehra1;
+}
+}
+else 
+{
+var x1, x2, x3, nom, ehra1, aehra;
+x1 = 0;
+x2 = 0;
+x3 = 0;
+ehra1 = 0;
+hrar = Number(document.ifs.hrareceived.value);
+nom = Number(document.ifs.noofmonths.value);
+aehra = Number(document.ifs.hrareceived.value)*nom;
+
+document.ifsans.note.value = "In case of HRA, exemption not available since the assessee lives in own house";
+}
+
+  var sp, bs, c, cnot, b, da, danot, ua, eua, aeua, taa, etaa, aetaa, aehra, gs, ifs; 
+  var noofc, cea, cha, ecea, echa, aecea, aecha, aecea1, aecha1;
+  var cia, ecia, aecia, haa, ehaa, aehaa, schafaa, eschafaa, aeschafaa, ida, eida, aeida;
+  var ea, ta, eta, ata, fixedmedicala, tiffina, servanta, nonpracticinga, wardena, interima, projecta, overtimea, citycompensatorya;
+  var aedailya, aetravellinga, aeconveyancea, aehelpera, aeacademicresearcha, aeuniforma;
+
+  sp = Number(document.ifs.sp.value);
+  bs = Number(document.ifs.bsreceived.value) * sp;
+  c = Number(document.ifs.creceived.value) * sp;
+  cnot = Number(document.ifs.cnot.value) * sp;
+  b = Number(document.ifs.b.value) * sp;
+  da = Number(document.ifs.dareceived.value) * sp;
+  danot = Number(document.ifs.danot.value) * sp;
+
+  ea = Number(document.ifs.ea.value)*sp;
+  fixedmedicala = Number(document.ifs.fixedmedicala.value)*sp;
+  tiffina = Number(document.ifs.tiffina.value)*sp;
+  servanta = Number(document.ifs.servanta.value)*sp;
+  nonpracticinga = Number(document.ifs.nonpracticinga.value)*sp;
+  wardena = Number(document.ifs.wardena.value)*sp;
+  interima = Number(document.ifs.interima.value)*sp;
+  projecta = Number(document.ifs.projecta.value)*sp;
+  overtimea = Number(document.ifs.overtimea.value)*sp;
+  citycompensatorya = Number(document.ifs.citycompensatorya.value)*sp;
+  
+
+
+  ta = Number(document.ifs.ta.value) * sp;
+  if (document.ifs.bdd.value=="Yes") 
+  {eta=3200*sp;
+    if (eta>ta) {aeta=0;} else {aeta=ta-eta;}
+  } if (document.ifs.bdd.value=="No") {eta=0; aeta=ta;}
+  
+  
+  
+  cea = Number(document.ifs.cea.value) * sp;
+
+  if (document.ifs.noofc.value == "2" || "More Than 2") 
+  {ecea = 100 * sp * 2;
+  aecea=cea-ecea;}
+  if (ecea>cea) {aecea1=0;}
+  else {aecea1=aecea;}
+  
+  if (document.ifs.noofc.value == "0") 
+  {ecea = 100 * sp * 0;
+  aecea=cea-ecea;}
+  if (ecea>cea) {aecea1=0;}
+  else {aecea1=aecea;}
+  
+  if (document.ifs.noofc.value == "1") 
+  {ecea = 100 * sp * 1;
+  aecea=cea-ecea;}
+  if (ecea>cea) {aecea1=0;}
+  else {aecea1=aecea;}
+  
+  cha = Number(document.ifs.cha.value) * sp;
+
+  if (document.ifs.noofc.value == "2" || "More Than 2") 
+  {echa = 300 * sp * 2;
+  aecha=cha-echa;}
+  if (echa>cha) {aecha1=0;}
+  else {aecha1=aecha;}
+  
+  if (document.ifs.noofc.value == "0") 
+  {echa = 300 * sp * 0;
+  aecha=cha-echa;}
+  if (echa>cha) {aecha1=0;}
+  else {aecha1=aecha;}
+  
+  if (document.ifs.noofc.value == "1") 
+  {echa = 300 * sp * 1;
+  aecha=cha-echa;}
+  if (echa>cha) {aecha1=0;}
+  else {aecha1=aecha;}
+  
+  
+  
+  ua = Number(document.ifs.ua.value) * sp;
+  eua = 800*sp;
+  if (ua>eua) {aeua = ua-eua;} else {aeua=ua;}
+  
+  taa = Number(document.ifs.taa.value) * sp;
+  etaa = 200*sp;
+  if (taa>etaa) {aetaa = taa-etaa;} else {aetaa=taa;}
+  
+  if (Number(document.ifs.edailya.value)>Number(document.ifs.dailya.value)*sp) {aedailya=0;} else {aedailya=Number(document.ifs.dailya.value)*sp-Number(document.ifs.edailya.value);}
+  if (Number(document.ifs.etravellinga.value)>Number(document.ifs.travellinga.value)*sp) {aetravellinga=0;} else {aetravellinga=Number(document.ifs.travellinga.value)*sp-Number(document.ifs.etravellinga.value);}
+  if (Number(document.ifs.econveyancea.value)>Number(document.ifs.conveyancea.value)*sp) {aeconveyancea=0;} else {aeconveyancea=Number(document.ifs.conveyancea.value)*sp-Number(document.ifs.econveyancea.value);}
+  if (Number(document.ifs.ehelpera.value)>Number(document.ifs.helpera.value)*sp) {aehelpera=0;} else {aehelpera=Number(document.ifs.helpera.value)*sp-Number(document.ifs.ehelpera.value);}
+  if (Number(document.ifs.eacademicresearcha.value)>Number(document.ifs.academicresearcha.value)*sp) {aeacademicresearcha=0;} else {aeacademicresearcha=Number(document.ifs.academicresearcha.value)*sp-Number(document.ifs.eacademicresearcha.value);}
+  if (Number(document.ifs.euniforma.value)>Number(document.ifs.uniforma.value)*sp) {aeuniforma=0;} else {aeuniforma=Number(document.ifs.uniforma.value)*sp-Number(document.ifs.euniforma.value);}
+
+
+var rfaccommodation, accommodationp, licensefee, population, leaserent, costoff, hireoff, recoveredrent, rfasalary, rfas, rfas1;
+
+accommodationp = Number(document.ifs.accommodationp.value);
+licensefee = Number(document.ifs.licensefee.value) * accommodationp;
+leaserent = Number(document.ifs.leaserent.value) * accommodationp;
+recoveredrent = Number(document.ifs.recoveredrent.value) * accommodationp;
+costoff = Number(document.ifs.costoff.value);
+hireoff = Number(document.ifs.hireoff.value) * accommodationp;
+rfasalary =(bs+c+cnot+b+da+ea+aeua+aetaa+aehra+aecea1+aecha1+aeta+aedailya+aetravellinga+aeconveyancea+aehelpera+aeacademicresearcha+aeuniforma+fixedmedicala+tiffina+servanta+nonpracticinga+wardena+interima+projecta+overtimea+citycompensatorya)*accommodationp/sp;
+
+if (document.ifs.rfaccommodation.value == "Accommodation is provided by the Government to the employee") {rfas1=0; rfas=0; rfaccommodation=licensefee+(costoff*.1)+hireoff-recoveredrent; 
+
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by the Government: " + "\n License fee determined by the Govt. = " + licensefee + "\n  Add: Value of furniture, etc. provided by employer = " + ((costoff*.1)+(hireoff)) + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;}
+
+if (document.ifs.rfaccommodation.value == "Accommodation is provided by any other employer and the accommodation is owned by the employer") 
+{ 
+if (document.ifs.population.value == "Above 25 Lakh") {rfas1=0; rfas=rfasalary*.15; rfaccommodation=(rfasalary*.15)+(costoff*.1)+hireoff-recoveredrent; 
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any other employer and the accommodation is owned by the employer : " + "\n 15% of salary if population is greater than 25 lakh = " + rfas + "\n  Add: Value of furniture, etc. provided by employer = " + ((costoff*.1)+(hireoff)) + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;
+}
+if (document.ifs.population.value == "From 10 Lakh to 25 Lakh") {rfas1=0; rfas=rfasalary*.10;
+rfaccommodation=(rfasalary*.10)+(costoff*.1)+hireoff-recoveredrent;
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any other employer and the accommodation is owned by the employer : " + "\n 10% of salary if population is greater than 10 lakh but less than 25 lakh = " + rfas + "\n  Add: Value of furniture, etc. provided by employer = " + ((costoff*.1)+(hireoff)) + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;
+}
+if (document.ifs.population.value == "Below 10 Lakh") {rfas1=0; rfas=rfasalary*.075;
+rfaccommodation=(rfasalary*.075)+(costoff*.1)+hireoff-recoveredrent;
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any other employer and the accommodation is owned by the employer : " + "\n 7.5% of salary if population is less than 10 lakh = " + rfas + "\n  Add: Value of furniture, etc. provided by employer = " + ((costoff*.1)+(hireoff)) + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;
+}
+}
+
+if (document.ifs.rfaccommodation.value == "Accommodation is provided by any other employer and the accommodation is taken on lease/rent by the employer") {rfas=0; rfas1=Math.min((rfasalary*.15),(leaserent));
+rfaccommodation=Math.min((rfasalary*.15),(leaserent))+(costoff*.1)+hireoff-recoveredrent;
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any other employer and the accommodation is taken on lease/rent by the employer : " + "\n Lower of 15% of salary or lease rental paid by the employer = " + rfas1 + "\n  Add: Value of furniture, etc. provided by employer = " + ((costoff*.1)+(hireoff)) + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;
+}
+
+if (document.ifs.rfaccommodation.value == "Accommodation is provided by any employer in a hotel and such accommodation not exceeds 15 days on his transfer") {rfas=0; rfas1=0; rfaccommodation=0;
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any employer in a hotel and such accommodation not exceeds 15 days on his transfer : " + "\nValue of rent free accommodation = " + rfaccommodation;
+}
+
+if (document.ifs.rfaccommodation.value == "Accommodation is provided by any employer in a hotel and such accommodation exceeds 15 days on his transfer") {rfas=0; rfas1=Math.min((rfasalary*.24),(leaserent)); rfaccommodation=Math.min((rfasalary*.24),(leaserent))-recoveredrent;
+document.ifsans.gs.value = rfaccommodation;
+document.ifsans.ifssteps.value = "Computation of Value of Rent Free Accommodation" + "\n\nIf the accommodation is provided by any employer in a hotel and such accommodation exceeds 15 days on his transfer : " + "\n Lower of 24% of salary or lease rental paid by the employer = " + rfas1 + "\n  Less: Rent recoverd from the employee = " + recoveredrent + "\n\nValue of rent free accommodation = " + rfaccommodation;
+}
+
+}
+
+</script>
+
+</body></html>

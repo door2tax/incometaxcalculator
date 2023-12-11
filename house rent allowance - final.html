@@ -1,0 +1,211 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #ff073d; white-space: nowrap;  font-size: 3vw;">Computation of House Rent Allowance (HRA) with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="hra">
+
+<tr>
+<th>Basic Salary (per month) : </th>
+<td>
+<INPUT Type="text" Name="bsreceived">
+</td>
+</tr>
+
+<tr>
+<th>Dearness Allowance (if provided in terms of employment) (per month) : </th>
+<td>
+<INPUT Type="text" Name="dareceived">
+</td>
+</tr>
+
+<tr>
+<th>Commission (as a fixed percentage of turnover) (per month) : </th>
+<td>
+<INPUT Type="text" Name="creceived">
+</td>
+</tr>
+
+<tr>
+<th>House Rent Allowance (per month) : </th>
+<td>
+<INPUT Type="text" Name="hrareceived">
+</td>
+</tr>
+
+<tr>
+<th>Rent Paid (per month) : </th>
+<td>
+<INPUT Type="text" Name="rpaid">
+</td>
+</tr>
+
+<tr>
+<th>Months during which the accommodation was occupied : </th>
+<td>
+<Select Name="noofmonths">
+<Option>1</option>
+<Option>2</option>
+<Option>3</option>
+<Option>4</option>
+<Option>5</option>
+<Option>6</option>
+<Option>7</option>
+<Option>8</option>
+<Option>9</option>
+<Option>10</option>
+<Option>11</option>
+<Option selected>12</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th>Place of accommodation : </th>
+<td>
+<Select Name="poa">
+<Option>Metro Cities (i.e. Delhi, Kolkata, Mumbai, Chennai)</option>
+<Option>Other Cities</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th>Accommodation in Own house or Rented house : </th>
+<td>
+<Select Name="art">
+<Option selected>Rented House</option>
+<Option>Own house</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="HRA()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Taxable HRA : </th>
+<td>
+<INPUT Type="text" Name="aehra">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="10" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+function HRA()
+{
+if (document.hra.art.value == "Rented House")
+{
+if (document.hra.poa.value == "Metro Cities (i.e. Delhi, Kolkata, Mumbai, Chennai)")
+{
+var bs,da, c, s, nom, hrar, rp, x1, x2, x3, x4, ehra, ehra1, aehra;
+bs = Number(document.hra.bsreceived.value);
+da = Number(document.hra.dareceived.value);
+c = Number(document.hra.creceived.value);
+nom = Number(document.hra.noofmonths.value);
+s = (bs + da+ c);
+hrar = Number(document.hra.hrareceived.value);
+rp = Number(document.hra.rpaid.value);
+x1 = hrar * nom;
+x2 = (rp * nom) - (.10 * s * nom);
+x3 = .50 * s * nom;
+x4 = 0;
+ehra = Math.min(x1, x2, x3);
+ehra1 = Math.max(ehra, x4);
+aehra = x1 - ehra1;
+
+document.hra.aehra.value = aehra;
+
+document.hra.steps.value = "HRA received = " + hrar*nom + "\n Less: Least of the following is exempted :" + "\n A. The actual amount received (" + hrar + "x" + nom + ") = " + x1 + "\n B. Rent Paid - 10% of Salary (" + rp*nom + " - " + "10%x" + s*nom + ") = " + x2 + "\n C. 50% Salary (as the accommodation is in Metro City) (50%x" + s*nom + ") = " + x3 + "\nExempted HRA = " + ehra1 + "\n\nTaxable HRA = " + aehra;
+}
+else 
+{
+var bs,da, c, s, nom, hrar, rp, x1, x2, x3, x4, ehra, ehra1, aehra;
+bs = Number(document.hra.bsreceived.value);
+da = Number(document.hra.dareceived.value);
+c = Number(document.hra.creceived.value);
+nom = Number(document.hra.noofmonths.value);
+s = (bs + da+ c);
+hrar = Number(document.hra.hrareceived.value);
+rp = Number(document.hra.rpaid.value);
+x1 = hrar * nom;
+x2 = (rp * nom) - (.10 * s * nom);
+x3 = .40 * s * nom;
+x4 = 0;
+ehra = Math.min(x1, x2, x3);
+ehra1 = Math.max(ehra, x4);
+aehra = x1 - ehra1;
+
+document.hra.aehra.value = aehra;
+
+document.hra.steps.value = "HRA received = " + hrar*nom + "\n Less: Least of the following is exempted :" + "\n A. The actual amount received (" + hrar + "x" + nom + ") = " + x1 + "\n B. Rent Paid - 10% of Salary (" + rp*nom + " - " + "10%x" + s*nom + ") = " + x2 + "\n C. 40% Salary (as the accommodation is in Non-Metro City) (40%x" + s*nom + ") = " + x3 + "\nExempted HRA = " + ehra1 + "\n\nTaxable HRA = " + aehra;
+}
+}
+else 
+{
+document.hra.aehra.value = 0;
+document.hra.steps.value = "Exemption not available since the assessee lives in own house";
+}
+}
+</script>
+</body>
+</html>
