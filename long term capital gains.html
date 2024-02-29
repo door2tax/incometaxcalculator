@@ -1,0 +1,375 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+th:first-child {width: 40%;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #6A359F; white-space: nowrap;  font-size: 3vw;">Computation of Long-Term Capital Gains with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="cg">
+
+<tr>
+<th>Full value of consideration (Full value if condideration received or accruing as a result of transfer) : </th>
+<td>
+<INPUT Type="text" Name="fvoc">
+</td>
+</tr>
+
+<tr>
+<th>Year of Transfer : </th>
+<td>
+<Select Name="yot">
+<Option>2001-2002</option>
+<Option>2002-2003</option>
+<Option>2003-2004</option>
+<Option>2004-2005</option>
+<Option>2005-2006</option>
+<Option>2006-2007</option>
+<Option>2007-2008</option>
+<Option>2008-2009</option>
+<Option>2009-2010</option>
+<Option>2010-2011</option>
+<Option>2011-2012</option>
+<Option>2012-2013</option>
+<Option>2013-2014</option>
+<Option>2014-2015</option>
+<Option>2015-2016</option>
+<Option>2016-2017</option>
+<Option>2017-2018</option>
+<Option>2018-2019</option>
+<Option>2019-2020</option>
+<Option>2020-2021</option>
+<Option>2021-2022</option>
+<Option selected>2022-2023</option>
+<Option>2023-2024</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th>Cost of Acquisition : </th>
+<td>
+<INPUT Type="text" Name="coa">
+</td>
+</tr>
+
+<tr>
+<th>Year of Acquisition : </th>
+<td>
+<Select Name="yoa">
+<Option>2001-2002</option>
+<Option>2002-2003</option>
+<Option>2003-2004</option>
+<Option>2004-2005</option>
+<Option>2005-2006</option>
+<Option>2006-2007</option>
+<Option>2007-2008</option>
+<Option>2008-2009</option>
+<Option>2009-2010</option>
+<Option>2010-2011</option>
+<Option>2011-2012</option>
+<Option>2012-2013</option>
+<Option>2013-2014</option>
+<Option>2014-2015</option>
+<Option>2015-2016</option>
+<Option>2016-2017</option>
+<Option>2017-2018</option>
+<Option>2018-2019</option>
+<Option>2019-2020</option>
+<Option>2020-2021</option>
+<Option>2021-2022</option>
+<Option>2022-2023</option>
+<Option>2023-2024</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th>Cost of Improvement : </th>
+<td>
+<INPUT Type="text" Name="coi">
+</td>
+</tr>
+
+<tr>
+<th>Year of Improvement : </th>
+<td>
+<Select Name="yoi">
+<Option>2001-2002</option>
+<Option>2002-2003</option>
+<Option>2003-2004</option>
+<Option>2004-2005</option>
+<Option>2005-2006</option>
+<Option>2006-2007</option>
+<Option>2007-2008</option>
+<Option>2008-2009</option>
+<Option>2009-2010</option>
+<Option>2010-2011</option>
+<Option>2011-2012</option>
+<Option>2012-2013</option>
+<Option>2013-2014</option>
+<Option>2014-2015</option>
+<Option>2015-2016</option>
+<Option>2016-2017</option>
+<Option>2017-2018</option>
+<Option>2018-2019</option>
+<Option>2019-2020</option>
+<Option>2020-2021</option>
+<Option>2021-2022</option>
+<Option>2022-2023</option>
+<Option>2023-2024</option>
+</Select>
+</td>
+</tr>
+
+<tr>
+<th>Cost of Transfer (Expenditure incurred wholly and exclusively in connection with such transfer) : </th>
+<td>
+<INPUT Type="text" Name="cot">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"> </th>
+</tr>
+
+<tr>
+<th> Capital gains on transfer of residential house and investment in another residential house (Section 54) </th>
+<td>
+<INPUT Type="text" Name="s54">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains on transfer of agricultural land and investment in another agricultural land (Section 54B) </th>
+<td>
+<INPUT Type="text" Name="s54b">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains on transfer by way of compulsory acquisition of land or/and building of an industrial undertaking and investment in any other land or/and building for shifting or <br> re-establishing the exising undertaking or setting up as new industrial underataking (Section 54D) </th>
+<td>
+<INPUT Type="text" Name="s54d">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains on transfer of long term  capital assets and invested in long term specified assets such as : National Highway <br> Authority of India (NHAI) Bond, Rural Electrification Corporation Limited (RECL) Bond, Any other bond notified <br> by the central government (Section 54EC) </th>
+<td>
+<INPUT Type="text" Name="s54ec">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains on transfer of long term capital assets other than residential house and investment in residential house (Section 54F) </th>
+<td>
+<INPUT Type="text" Name="s54f">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains deposited under Capital Gains Account Scheme (CGAS) </th>
+<td>
+<INPUT Type="text" Name="cgas">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="CG()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Long Term Capital Gain : </th>
+<td>
+<INPUT Type="text" Name="ltcg">
+</td>
+</tr>
+
+<tr>
+<th>Long Term Capital Loss : </th>
+<td>
+<INPUT Type="text" Name="ltcl">
+</td>
+</tr>
+
+<tr>
+<th>Taxable Long Term Capital Gain : </th>
+<td>
+<INPUT Type="text" Name="tltcg">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="20" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function CG()
+{
+var cr, ca, ci, ct, yoa, ica, yoi, ici, yot, ict, aica, aici, s54, s54b, s54d, s54ec, as54f, s54f, cgas, ltcg1, ltcg2, ltcg3, ltcg4, ltcl;
+cr= Number(document.cg.fvoc.value);
+ca= Number(document.cg.coa.value);
+ci= Number(document.cg.coi.value);
+ct= Number(document.cg.cot.value);
+s54= Number(document.cg.s54.value);
+s54b= Number(document.cg.s54b.value);
+s54d= Number(document.cg.s54d.value);
+s54ec= Number(document.cg.s54ec.value);
+as54f= Number(document.cg.s54f.value);
+cgas = Number(document.cg.cgas.value);
+
+yoa = (document.cg.yoa.value);
+if (yoa=="2001-2002") {ica=100;}
+else if (yoa=="2002-2003") {ica=105;} 
+else if (yoa=="2003-2004") {ica=109;} 
+else if (yoa=="2004-2005") {ica=113;} 
+else if (yoa=="2005-2006") {ica=117;} 
+else if (yoa=="2006-2007") {ica=122;} 
+else if (yoa=="2007-2008") {ica=129;} 
+else if (yoa=="2008-2009") {ica=137;} 
+else if (yoa=="2009-2010") {ica=148;} 
+else if (yoa=="2010-2011") {ica=167;} 
+else if (yoa=="2011-2012") {ica=184;} 
+else if (yoa=="2012-2013") {ica=200;} 
+else if (yoa=="2013-2014") {ica=220;} 
+else if (yoa=="2014-2015") {ica=240;} 
+else if (yoa=="2015-2016") {ica=254;} 
+else if (yoa=="2016-2017") {ica=264;} 
+else if (yoa=="2017-2018") {ica=272;} 
+else if (yoa=="2018-2019") {ica=280;} 
+else if (yoa=="2019-2020") {ica=289;} 
+else if (yoa=="2020-2021") {ica=301;} 
+else if (yoa=="2021-2022") {ica=317;} 
+else if (yoa=="2022-2023") {ica=331;} 
+else if (yoa=="2023-2024") {ica=348;} 
+
+yoi = (document.cg.yoi.value);
+if (yoi=="2001-2002") {ici=100;}
+else if (yoi=="2002-2003") {ici=105;} 
+else if (yoi=="2003-2004") {ici=109;} 
+else if (yoi=="2004-2005") {ici=113;} 
+else if (yoi=="2005-2006") {ici=117;} 
+else if (yoi=="2006-2007") {ici=122;} 
+else if (yoi=="2007-2008") {ici=129;} 
+else if (yoi=="2008-2009") {ici=137;} 
+else if (yoi=="2009-2010") {ici=148;} 
+else if (yoi=="2010-2011") {ici=167;} 
+else if (yoi=="2011-2012") {ici=184;} 
+else if (yoi=="2012-2013") {ici=200;} 
+else if (yoi=="2013-2014") {ici=220;} 
+else if (yoi=="2014-2015") {ici=240;} 
+else if (yoi=="2015-2016") {ici=254;} 
+else if (yoi=="2016-2017") {ici=264;} 
+else if (yoi=="2017-2018") {ici=272;} 
+else if (yoi=="2018-2019") {ici=280;} 
+else if (yoi=="2019-2020") {ici=289;} 
+else if (yoi=="2020-2021") {ici=301;} 
+else if (yoi=="2021-2022") {ici=317;} 
+else if (yoi=="2022-2023") {ici=331;} 
+else if (yoi=="2023-2024") {ici=348;} 
+
+yot = (document.cg.yot.value);
+if (yot=="2001-2002") {ict=100;}
+else if (yot=="2002-2003") {ict=105;} 
+else if (yot=="2003-2004") {ict=109;} 
+else if (yot=="2004-2005") {ict=113;} 
+else if (yot=="2005-2006") {ict=117;} 
+else if (yot=="2006-2007") {ict=122;} 
+else if (yot=="2007-2008") {ict=129;} 
+else if (yot=="2008-2009") {ict=137;} 
+else if (yot=="2009-2010") {ict=148;} 
+else if (yot=="2010-2011") {ict=167;} 
+else if (yot=="2011-2012") {ict=184;} 
+else if (yot=="2012-2013") {ict=200;} 
+else if (yot=="2013-2014") {ict=220;} 
+else if (yot=="2014-2015") {ict=240;} 
+else if (yot=="2015-2016") {ict=254;} 
+else if (yot=="2016-2017") {ict=264;} 
+else if (yot=="2017-2018") {ict=272;} 
+else if (yot=="2018-2019") {ict=280;} 
+else if (yot=="2019-2020") {ict=289;} 
+else if (yot=="2020-2021") {ict=301;} 
+else if (yot=="2021-2022") {ict=317;} 
+else if (yot=="2022-2023") {ict=331;} 
+else if (yot=="2023-2024") {ict=348;} 
+
+aica = ca*ict/ica;
+aici = ci*ict/ici;
+
+ltcg1 = (cr - ct)-(aica+aici);
+if (ltcg1>0) {ltcg2= (cr - ct)-(aica+aici); ltcl=0;}
+else {ltcg2=0; ltcl = -((cr - ct)-(ca+ci));}
+
+s54f = ltcg2*((as54f)/(cr-ct));
+
+ltcg3 = ltcg2-(s54+s54b+s54d+s54ec+s54f+cgas); 
+if (ltcg3>0) {ltcg4= ltcg2-(s54+s54b+s54d+s54ec+s54f+cgas);}
+else {ltcg4=0;}
+
+document.cg.ltcg.value = ltcg2;
+document.cg.ltcl.value = ltcl;
+document.cg.tltcg.value = ltcg4;
+
+document.cg.steps.value = "Computation of Long Term Capital Gain" + "\n\nFull value of consideration        = " + cr + "\n Less: Cost of transfer            = " + ct + "\nNet Sale Consideration             = " + (cr-ct) + "\n Less: Indexed Cost of acquisition = " + aica + "     (i.e. " + ca + "*" + ict + "/" + ica + ")" + "\n Less: Indexed Cost of improvement = " + aici +  "     (i.e. " + ci + "*" + ict + "/" + ici + ")" + "\nLong-term capital gain (LTCG)      = " + ltcg2 + "\nLong-term capital loss (LTCL)      = " + ltcl + "\n\n Less: Exemption under section 54  = " + s54 + "\n Less: Exemption under section 54B = " + s54b + "\n Less: Exemption under section 54D = " + s54d + "\n Less: Exemption under section 54EC= " + s54ec + "\n Less: Exemption under section 54F = " + s54f + "     (i.e. " + ltcg2 + "*(" + as54f + ")/(" + cr + "-" + ct + ")" + "\n Less: Exemption under CGAS        = " + cgas +
+
+"\nLTCG chargeable to tax             = " + ltcg4;
+
+}
+</script>
+</body>
+</html>
