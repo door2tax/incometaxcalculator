@@ -1,0 +1,163 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 100%;}
+select {font-size: 2vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #02801C; white-space: nowrap;  font-size: 3vw;">Computation of Tax Liability with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="tl">
+
+<tr>
+<th>Total Income : </th>
+<td>
+<INPUT Type="text" Name="ti">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+
+<tr>
+<th>Long Term Capital Gains : </th>
+<td>
+<INPUT Type="text" Name="ltcg">
+</td>
+</tr>
+
+<tr>
+<th>Casual Incomes (Gross) : </th>
+<td>
+<INPUT Type="text" Name="ci">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="TL()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Tax Liability : </th>
+<td>
+<INPUT Type="text" Name="atl">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="20" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function TL()
+{
+var ti, ltcg, ci, a1, a2, b1, b2, b3, aaatl, aatl, atl, natl;
+ti = Number(document.tl.ti.value); 
+ltcg = Number(document.tl.ltcg.value);
+ci = Number(document.tl.ci.value);
+a1 = ti - ltcg;
+a2 = a1 - ci;
+b1 = ltcg*20/100;
+b2 = ci*30/100;
+
+
+
+if (a2 <= 250000) { b3 = (0); 
+aaatl = b1+b2+b3;
+aatl = aaatl*4/100;
+atl = aaatl+aatl;
+natl = Math.round(atl / 10) * 10;
+document.tl.atl.value = natl;
+document.tl.steps.value = "Computation of Tax Liability " + "\n\nTotal Income                  = " + ti + "\n Less: Long Term Capital Gain = " + ltcg + "\n Less: Casual Incomes (Gross) = " + ci + "\n Balance                      = " + a2 + "\n\nTax on Long Term Capital Gain = " + ltcg+" * 20% = "+ b1 + "\nTax on Casual Income (Gross)  = " + ci+" * 30% = "+ b2 + "\nTax on balance amount :" + "\n          First  250000 = " + "NIL" + "\nTotal                         = " + aaatl + "\nAdd: Health & Education Cess  = " + aaatl + " * 4% = " + aatl + "\nTax Liability                 = " + atl + "\nTax Liability (Nearest 10)    = " + natl;}
+
+
+
+else if (a2 <= 500000) { b3 = (0) + (a2-250000)*5/100; 
+aaatl = b1+b2+b3;
+aatl = aaatl*4/100;
+atl = aaatl+aatl;
+natl = Math.round(atl / 10) * 10;
+document.tl.atl.value = natl;
+document.tl.steps.value = "Computation of Tax Liability " + "\n\nTotal Income                  = " + ti + "\n Less: Long Term Capital Gain = " + ltcg + "\n Less: Casual Incomes (Gross) = " + ci + "\n Balance                      = " + a2 + "\n\nTax on Long Term Capital Gain = " + ltcg+" * 20% = "+ b1 + "\nTax on Casual Income (Gross)  = " + ci+" * 30% = "+ b2 + "\nTax on balance amount :" + "\n          First  250000 = " + "NIL"+ "\n          Next  " + (a2-250000) + " = " + (a2-250000) + " *  5%  = " + ((a2-250000)*5/100) + "\nTotal                         = " + aaatl + "\nAdd: Health & Education Cess  = " + aaatl + " * 4% = " + aatl + "\nTax Liability                 = " + atl + "\nTax Liability (Nearest 10)    = " + natl;}
+
+
+
+else if (a2 <= 1000000) { b3 = (0) + (250000*5/100) + ((a2-500000)*20/100); 
+aaatl = b1+b2+b3;
+aatl = aaatl*4/100;
+atl = aaatl+aatl;
+natl = Math.round(atl / 10) * 10;
+document.tl.atl.value = natl;
+document.tl.steps.value = "Computation of Tax Liability " + "\n\nTotal Income                  = " + ti + "\n Less: Long Term Capital Gain = " + ltcg + "\n Less: Casual Incomes (Gross) = " + ci + "\n Balance                      = " + a2 + "\n\nTax on Long Term Capital Gain = " + ltcg+" * 20% = "+ b1 + "\nTax on Casual Income (Gross)  = " + ci+" * 30% = "+ b2 + "\nTax on balance amount :" + "\n          First  250000 = " + "NIL"+ "\n          Next   250000 = " + "250000 *  5%  = " + (250000*5/100) + "\n          Next " + (a2-500000) + " = " + (a2-500000) + " * 20%  = " + ((a2-500000)*20/100) + "\nTotal                         = " + aaatl + "\nAdd: Health & Education Cess  = " + aaatl + " * 4% = " + aatl + "\nTax Liability                 = " + atl + "\nTax Liability (Nearest 10)    = " + natl;}
+
+
+
+else if (a2 > 1000000) { b3 = (0) + (250000*5/100) + (500000*20/100) + ((a2-1000000)*30/100);
+aaatl = b1+b2+b3;
+aatl = aaatl*4/100;
+atl = aaatl+aatl;
+natl = Math.round(atl / 10) * 10;
+document.tl.atl.value = natl;
+document.tl.steps.value = "Computation of Tax Liability " + "\n\nTotal Income                  = " + ti + "\n Less: Long Term Capital Gain = " + ltcg + "\n Less: Casual Incomes (Gross) = " + ci + "\n Balance                      = " + a2 + "\n\nTax on Long Term Capital Gain = " + ltcg+" * 20% = "+ b1 + "\nTax on Casual Income (Gross)  = " + ci+" * 30% = "+ b2 + "\nTax on balance amount :" + "\n          First  250000 = " + "NIL"+ "\n          Next   250000 = " + "250000 *  5%  = " + (250000*5/100) + "\n          Next   500000 = " + "500000 * 20%  = " + (500000*20/100) + "\n          Above 1000000 = " + (a2-1000000) + " * 30% = " + ((a2-1000000)*30/100) + "\nTotal                         = " + aaatl + "\nAdd: Health & Education Cess  = " + aaatl + " * 4% = " + aatl + "\nTax Liability                 = " + atl + "\nTax Liability (Nearest 10)    = " + natl;}
+
+
+
+} 
+
+</script>
+</body>
+</html>
