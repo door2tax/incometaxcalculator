@@ -1,0 +1,166 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 3vw; width: 100%;}
+select {font-size: 3vw; width: 100%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+th:first-child {width: 45%;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #7239AA; white-space: nowrap;  font-size: 3vw;">Computation of Short-Term Capital Gains with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="cg">
+
+<tr>
+<th>Full value of consideration (Full value if condideration received or accruing as a result of transfer) : </th>
+<td>
+<INPUT Type="text" Name="fvoc">
+</td>
+</tr>
+
+<tr>
+<th>Cost of Transfer (Expenditure incurred wholly and exclusively in connection with such transfer) : </th>
+<td>
+<INPUT Type="text" Name="cot">
+</td>
+</tr>
+
+<tr>
+<th>Cost of Acquisition : </th>
+<td>
+<INPUT Type="text" Name="coa">
+</td>
+</tr>
+
+<tr>
+<th>Cost of Improvement : </th>
+<td>
+<INPUT Type="text" Name="coi">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"> </th>
+</tr>
+
+<tr>
+<th> Capital gains on transfer of agricultural land and investment in another agricultural land (Section 54B) </th>
+<td>
+<INPUT Type="text" Name="s54b">
+</td>
+</tr>
+
+<tr>
+<th> Capital gains on transfer by way of compulsory acquisition of land or/and building of an industrial undertaking and investment in any other land or/and building for shifting or re-establishing the exising undertaking or setting up as new industrial underataking (Section 54D) </th>
+<td>
+<INPUT Type="text" Name="s54d">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="CG()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Short Term Capital Gain : </th>
+<td>
+<INPUT Type="text" Name="stcg">
+</td>
+</tr>
+
+<tr>
+<th>Short Term Capital Loss : </th>
+<td>
+<INPUT Type="text" Name="stcl">
+</td>
+</tr>
+
+<tr>
+<th>Taxable Short Term Capital Gain : </th>
+<td>
+<INPUT Type="text" Name="tstcg">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="20" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function CG()
+{
+var cr, ca, ci, ct, s54b, s54d, stcg1, stcg2, stcg3, stcg4, stcl;
+cr= Number(document.cg.fvoc.value);
+ca= Number(document.cg.coa.value);
+ci= Number(document.cg.coi.value);
+ct= Number(document.cg.cot.value);
+s54b= Number(document.cg.s54b.value);
+s54d= Number(document.cg.s54d.value);
+stcg1 = (cr - ct)-(ca+ci);
+if (stcg1>0) {stcg2= (cr - ct)-(ca+ci); stcl=0;}
+else {stcg2=0; stcl = -((cr - ct)-(ca+ci));}
+stcg3 = stcg2-(s54b+s54d); 
+if (stcg3>0) {stcg4= stcg2-(s54b+s54d);}
+else {stcg4=0;}
+
+document.cg.stcg.value = stcg2;
+document.cg.stcl.value = stcl;
+document.cg.tstcg.value = stcg4;
+
+document.cg.steps.value = "Computation of Short Term Capital Gain" + "\n\nFull value of consideration        = " + cr + "\n Less: Cost of transfer            = " + ct + "\nNet Sale Consideration             = " + (cr-ct) + "\n Less: Cost of acquisition         = " + ca + "\n Less: Cost of improvement         = " + ci + "\nShort-term capital gain (STCG)     = " + stcg2 + "\nShort-term capital loss (STCL)     = " + stcl + "\n\n Less: Exemption under section 54B = " + s54b + "\n Less: Exemption under section 54D = " + s54d + "\nSTCG chargeable to tax             = " + stcg4;
+
+}
+</script>
+</body>
+</html>
