@@ -1,0 +1,503 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 30%;}
+select {font-size: 2vw; width: 20%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #ff5724; white-space: nowrap;  font-size: 3vw;">Computation of Income from Other Sources with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="ifos">
+
+<tr>
+<th>Dividend on Securities/Income from units of Mutual Fund : </th>
+<td><br>
+Dividend/Income 1 : <INPUT Type="text" Name="dfs1"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs10"> <br><br> 
+Dividend/Income 2 : <INPUT Type="text" Name="dfs2"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs20"> <br><br>
+Dividend/Income 3 : <INPUT Type="text" Name="dfs3"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs30"> <br><br>
+Dividend/Income 4 : <INPUT Type="text" Name="dfs4"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs40"> <br><br>
+Dividend/Income 5 : <INPUT Type="text" Name="dfs5"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs50"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Interest on Securities  : </th>
+<td><br>
+Interest income 1 : <INPUT Type="text" Name="ifs1"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs10"> <br><br>
+Interest income 2 : <INPUT Type="text" Name="ifs2"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs20"> <br><br>
+Interest income 3 : <INPUT Type="text" Name="ifs3"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs30"> <br><br>
+Interest income 4 : <INPUT Type="text" Name="ifs4"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs40"> <br><br>
+Interest income 5 : <INPUT Type="text" Name="ifs5"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs50"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Interest on Bank Deposits  : </th>
+<td><br>
+Interest from bank deposit 1 : <INPUT Type="text" Name="ifb1"> <br><br>
+Interest from bank deposit 2 : <INPUT Type="text" Name="ifb2"> <br><br>
+Interest from bank deposit 3 : <INPUT Type="text" Name="ifb3"> <br><br>
+</tr>
+
+<tr>
+<th>Interest on Post Office Savings Bank Account  : </th>
+<td><br>
+Interest on : <Select Name="poa">
+<Option>Individual Account</option>
+<Option>Joint Account</option>
+</Select> &nbsp; Amount : <INPUT Type="text" Name="poaa"><br><br>
+</td>
+</tr>
+
+<tr>
+<th>Interest on Public Account in Post Office : </th>
+<td><br>
+Amount : <INPUT Type="text" Name="iopaipoa"><br><br>
+</td>
+</tr>
+
+<tr>
+<th>Interest from Co-operative Bank : </th>
+<td><br>
+Interest from co-operative bank 1 : <INPUT Type="text" Name="ifcb1"> <br><br>
+Interest from co-operative bank 2 : <INPUT Type="text" Name="ifcb2"> <br><br>
+Interest from co-operative bank 3 : <INPUT Type="text" Name="ifcb3"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Casual Incomes : </th>
+<td><br> 
+Winnings from lotteries : <INPUT Type="text" Name="ci1"> &nbsp; <select name="ci11"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from crossword puzzles : <INPUT Type="text" Name="ci2"> &nbsp; <select name="ci22"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from card games : <INPUT Type="text" Name="ci3"> &nbsp; <select name="ci33"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from other games : <INPUT Type="text" Name="ci4"> &nbsp; <select name="ci44"><option>Gross</option><option>Net</option></select> <br><br>
+Betting, Gambling games : <INPUT Type="text" Name="ci5"> &nbsp; <select name="ci55"><option>Gross</option><option>Net</option></select> <br><br><br>
+Winnings from horse race : <INPUT Type="text" Name="cihr"> &nbsp; <select name="cihr0"><option>Gross</option><option>Net</option></select> <br><br>
+Expenses in respect of owning and maintaining race horses : <INPUT Type="text" Name="cihre"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Interest received on compensation/ enhanced compensation : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="iroc"> <br><br>
+</tr>
+
+<tr>
+<th>Income from letting out hire of furniture, machinery, etc : </th>
+<td><br>
+Income received : <INPUT Type="text" Name="iflo"> <br><br><br>
+Expenses incurred : <br><br>
+Current repairs : <INPUT Type="text" Name="iflo1"> <br><br>
+Insurace premium paid : <INPUT Type="text" Name="iflo2"> <br><br>
+Depreciation : <INPUT Type="text" Name="iflo3"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Income from Sub-Letting of a House Property : </th>
+<td><br>
+Amount : <INPUT Type="text" Name="ifsl"> <br><br><br>
+Expenses incurred : <br><br>
+Proportion of rent paid : <INPUT Type="text" Name="ifsl1"> <br><br>
+Proportion of Municipal Tax paid : <INPUT Type="text" Name="ifsl2"> <br><br>
+</tr>
+
+<tr>
+<th>Family Pension : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="fp"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Income from Undisclosed Sources : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="ifus"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Agricultural Income received outside India : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="airoi"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Composite Rent : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="cr"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Salary of MP, MLA, or Council : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="somp"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Directors Fees : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="df"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Rent from a vacant land : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="rfavl"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Income from Royalty : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="ifr"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Rent of Trade Mark : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="rotm"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Remuneration received from a <br> person  other than his employer <br> for evaluation of answer scripts : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="rrfas"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Income from Private tution : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="ifpt"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Remuneration from writing articles in Journals : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="rfwa"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th>Any sum received under a Keyman Insurance Policy : </th>
+<td><br>
+Amount received : <INPUT Type="text" Name="kip"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="IFOS()"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Income from Other Sources : </th>
+<td>
+<INPUT Type="text" Name="ifos">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="150" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function IFOS()
+{
+var dfs1, dfs11, dfs111, dfs10, dfs2, dfs22, dfs222, dfs20, dfs3, dfs33, dfs333, dfs30, dfs4, dfs44, dfs444, dfs40, dfs5, dfs55, dfs555, dfs50;
+
+if (Number(document.ifos.dfs1.value)>5000)
+{dfs11=Number(document.ifos.dfs1.value)*20/90;} else {dfs11=Number(document.ifos.dfs1.value)*20/100;}
+dfs111=Number(document.ifos.dfs10.value);
+dfs10=Math.min(dfs11,dfs111);
+if (Number(document.ifos.dfs1.value)>5000) {dfs1=Number(document.ifos.dfs1.value)*100/90-(dfs10);} else {dfs1=Number(document.ifos.dfs1.value)-(dfs10);}
+
+if (Number(document.ifos.dfs2.value)>5000)
+{dfs22=Number(document.ifos.dfs2.value)*20/90;} else {dfs22=Number(document.ifos.dfs2.value)*20/100;}
+dfs222=Number(document.ifos.dfs20.value);
+dfs20=Math.min(dfs22,dfs222);
+if (Number(document.ifos.dfs2.value)>5000) {dfs2=Number(document.ifos.dfs2.value)*100/90-(dfs20);} else {dfs2=Number(document.ifos.dfs2.value)-(dfs20);}
+
+if (Number(document.ifos.dfs3.value)>5000) 
+{dfs33=Number(document.ifos.dfs3.value)*20/90;} else {dfs33=Number(document.ifos.dfs3.value)*20/100;}
+dfs333=Number(document.ifos.dfs30.value);
+dfs30=Math.min(dfs33,dfs333);
+if (Number(document.ifos.dfs3.value)>5000) {dfs3=Number(document.ifos.dfs3.value)*100/90-(dfs30);} else {dfs3=Number(document.ifos.dfs3.value)-(dfs30);}
+
+if (Number(document.ifos.dfs4.value)>5000) 
+{dfs44=Number(document.ifos.dfs4.value)*20/90;} else {dfs44=Number(document.ifos.dfs4.value)*20/100;}
+dfs444=Number(document.ifos.dfs40.value);
+dfs40=Math.min(dfs44,dfs444);
+if (Number(document.ifos.dfs4.value)>5000) {dfs4=Number(document.ifos.dfs4.value)*100/90-(dfs40);} else {dfs4=Number(document.ifos.dfs4.value)-(dfs40);}
+
+if (Number(document.ifos.dfs5.value)>5000) 
+{dfs55=Number(document.ifos.dfs5.value)*20/90;} else {dfs55=Number(document.ifos.dfs5.value)*20/100;}
+dfs555=Number(document.ifos.dfs50.value);
+dfs50=Math.min(dfs55,dfs555);
+if (Number(document.ifos.dfs5.value)>5000) {dfs5=Number(document.ifos.dfs5.value)*100/90-(dfs50);} else {dfs5=Number(document.ifos.dfs5.value)-(dfs50);}
+
+
+
+var ifs1, ifs10, ifs2, ifs20, ifs3, ifs30, ifs4, ifs40, ifs5, ifs50;
+
+ifs10=Number(document.ifos.ifs10.value);
+if (Number(document.ifos.ifs1.value)>5000) {ifs1=Number(document.ifos.ifs1.value)*100/90-(ifs10);} else {ifs1=Number(document.ifos.ifs1.value)-(ifs10);}
+
+ifs20=Number(document.ifos.ifs20.value);
+if (Number(document.ifos.ifs2.value)>5000) {ifs2=Number(document.ifos.ifs2.value)*100/90-(ifs20);} else {ifs2=Number(document.ifos.ifs2.value)-(ifs20);}
+
+ifs30=Number(document.ifos.ifs30.value);
+if (Number(document.ifos.ifs3.value)>5000) {ifs3=Number(document.ifos.ifs3.value)*100/90-(ifs30);} else {ifs3=Number(document.ifos.ifs3.value)-(ifs30);}
+
+ifs40=Number(document.ifos.ifs40.value);
+if (Number(document.ifos.ifs4.value)>5000) {ifs4=Number(document.ifos.ifs4.value)*100/90-(ifs40);} else {ifs4=Number(document.ifos.ifs4.value)-(ifs40);}
+
+ifs50=Number(document.ifos.ifs50.value);
+if (Number(document.ifos.ifs5.value)>5000) {ifs5=Number(document.ifos.ifs5.value)*100/90-(ifs50);} else {ifs5=Number(document.ifos.ifs5.value)-(ifs50);}
+
+
+
+var ifb1, ifb2, ifb3; 
+if (Number(document.ifos.ifb1.value)>40000) {ifb1=Number(document.ifos.ifb1.value)*100/90;} else {ifb1=Number(document.ifos.ifb1.value);}
+if (Number(document.ifos.ifb2.value)>40000) {ifb2=Number(document.ifos.ifb2.value)*100/90;} else {ifb2=Number(document.ifos.ifb2.value);}
+if (Number(document.ifos.ifb3.value)>40000) {ifb3=Number(document.ifos.ifb3.value)*100/90;} else {ifb3=Number(document.ifos.ifb3.value);}
+
+var poaa, poaae, poaaa;
+poaa=Number(document.ifos.poaa.value);
+if (document.ifos.poa.value=="Individual Account")
+{if (poaa>3500){poaae=3500;} else {poaae=poaa;}}
+else if (document.ifos.poa.value=="Joint Account")
+{if (poaa>7000){poaae=7000;} else {poaae=poaa;}}
+poaaa=poaa-poaae;
+
+var iopaipoa, iopaipoae, iopaipoaa;
+iopaipoa=Number(document.ifos.iopaipoa.value);
+if (iopaipoa<=5000) {iopaipoae=iopaipoa;}
+else if (iopaipoa>5000) {iopaipoae=5000;}
+iopaipoaa=iopaipoa-iopaipoae;
+
+var ifcb1, ifcb2, ifcb3;
+ifcb1=Number(document.ifos.ifcb1.value);
+ifcb2=Number(document.ifos.ifcb2.value);
+ifcb3=Number(document.ifos.ifcb3.value);
+
+var ci1;
+if (document.ifos.ci11.value=="Gross") 
+{ci1=Number(document.ifos.ci1.value);}
+else if (document.ifos.ci11.value=="Net") 
+{
+if (Number(document.ifos.ci1.value)>10000){ci1=Number(document.ifos.ci1.value)*100/70;}
+else {ci1=Number(document.ifos.ci1.value);}
+}
+
+var ci2;
+if (document.ifos.ci22.value=="Gross") 
+{ci2=Number(document.ifos.ci2.value);}
+else if (document.ifos.ci22.value=="Net") 
+{
+if (Number(document.ifos.ci2.value)>10000){ci2=Number(document.ifos.ci2.value)*100/70;}
+else {ci2=Number(document.ifos.ci2.value);}
+}
+
+var ci3;
+if (document.ifos.ci33.value=="Gross") 
+{ci3=Number(document.ifos.ci3.value);}
+else if (document.ifos.ci33.value=="Net") 
+{
+if (Number(document.ifos.ci3.value)>10000){ci3=Number(document.ifos.ci3.value)*100/70;}
+else {ci3=Number(document.ifos.ci3.value);}
+}
+
+var ci4;
+if (document.ifos.ci44.value=="Gross") 
+{ci4=Number(document.ifos.ci4.value);}
+else if (document.ifos.ci44.value=="Net") 
+{
+if (Number(document.ifos.ci4.value)>10000){ci4=Number(document.ifos.ci4.value)*100/70;}
+else {ci4=Number(document.ifos.ci4.value);}
+}
+
+var ci5;
+if (document.ifos.ci55.value=="Gross") 
+{ci5=Number(document.ifos.ci5.value);}
+else if (document.ifos.ci55.value=="Net") 
+{
+if (Number(document.ifos.ci5.value)>10000){ci5=Number(document.ifos.ci5.value)*100/70;}
+else {ci5=Number(document.ifos.ci5.value);}
+}
+
+var cihre, cihr;
+cihre = Number(document.ifos.cihre.value);
+if (document.ifos.cihr0.value=="Gross") 
+{cihr=(Number(document.ifos.cihr.value))-cihre;}
+else if (document.ifos.cihr0.value=="Net") 
+{
+if (Number(document.ifos.cihr.value)>10000){cihr=(Number(document.ifos.cihr.value)*100/70)-cihre;}
+else {cihr=(Number(document.ifos.cihr.value))-cihre;}
+}
+
+var iroc, iroca;
+iroc= Number(document.ifos.iroc.value);
+iroca=iroc*50/100;
+
+var iflo, iflo1, iflo2, iflo3, ifloa;
+iflo= Number(document.ifos.iflo.value);
+iflo1= Number(document.ifos.iflo1.value);
+iflo2= Number(document.ifos.iflo2.value);
+iflo3= Number(document.ifos.iflo3.value);
+ifloa=iflo-(iflo1+iflo2+iflo3);
+
+var ifsl, ifsl1, ifsl2, ifsla;
+ifsl= Number(document.ifos.ifsl.value);
+ifsl1= Number(document.ifos.ifsl1.value);
+ifsl2= Number(document.ifos.ifsl2.value);
+ifsla=ifsl-(ifsl1+ifsl2);
+
+var kip, rfwa, ifpt, rrfas, rotm, ifr, rfavl, df, somp, cr, airoi, ifus;
+var fp1, fp2, fp3, fp;
+var ifs;
+
+fp1= Number(document.ifos.fp.value)*1/3;
+fp2= 15000;
+fp3= Math.min(fp1,fp2);
+fp= Number(document.ifos.fp.value)-fp3;
+
+ifus= Number(document.ifos.ifus.value);
+airoi= Number(document.ifos.airoi.value);
+cr= Number(document.ifos.cr.value);
+somp= Number(document.ifos.somp.value);
+df= Number(document.ifos.df.value);
+rfavl= Number(document.ifos.rfavl.value);
+ifr= Number(document.ifos.ifr.value);
+rotm= Number(document.ifos.rotm.value);
+rrfas= Number(document.ifos.rrfas.value);
+ifpt= Number(document.ifos.ifpt.value);
+rfwa= Number(document.ifos.rfwa.value);
+kip= Number(document.ifos.kip.value);
+
+
+
+
+ifs = kip+ rfwa+ ifpt+ rrfas+ rotm+ ifr+ rfavl+ df+ somp+ cr+ airoi+ ifus+ fp+ ifsla+ ifloa+ iroca+ cihr+ ci5+ ci4+ ci3+ ci2+ ci1 + ifcb1+ ifcb2+ ifcb3+ iopaipoaa+ poaaa+ ifb1+ ifb2+ ifb3+ ifs1+ ifs2+ ifs3+ ifs4+ ifs5+ dfs1+ dfs2+ dfs3+ dfs4+ dfs5;
+
+document.ifos.ifos.value = ifs;
+
+document.ifos.steps.value = "Computation of Income from Other Sources"+"\n\nDividend on security 1 (gross) = "+ (dfs1+dfs10) +"\n Less:Interest on loan upto 20% of income = "+dfs10+"\nIncome = "+dfs1 
++"\n\nDividend on security 2 (gross) = "+ (dfs2+dfs20) +"\n Less:Interest on loan upto 20% of income = "+dfs20+"\nIncome = "+dfs2
++"\n\nDividend on security 3 (gross) = "+ (dfs3+dfs30) +"\n Less:Interest on loan upto 20% of income = "+dfs30+"\nIncome = "+dfs3
++"\n\nDividend on security 4 (gross) = "+ (dfs4+dfs40) +"\n Less:Interest on loan upto 20% of income = "+dfs40+"\nIncome = "+dfs4
++"\n\nDividend on security 5 (gross) = "+ (dfs5+dfs50) +"\n Less:Interest on loan upto 20% of income = "+dfs50+"\nIncome = "+dfs5
++"\n\n"
++"\n\nInterest on security 1 (gross) = "+ (ifs1+ifs10) +"\n Less:Interest on loan, and reasonable expenses = "+ifs10+"\nIncome = "+ifs1
++"\n\nInterest on security 2 (gross) = "+ (ifs2+ifs20) +"\n Less:Interest on loan, and reasonable expenses = "+ifs20+"\nIncome = "+ifs2
++"\n\nInterest on security 3 (gross) = "+ (ifs3+ifs30) +"\n Less:Interest on loan, and reasonable expenses = "+ifs30+"\nIncome = "+ifs3
++"\n\nInterest on security 4 (gross) = "+ (ifs4+ifs40) +"\n Less:Interest on loan, and reasonable expenses = "+ifs40+"\nIncome = "+ifs4
++"\n\nInterest on security 5 (gross) = "+ (ifs5+ifs50) +"\n Less:Interest on loan, and reasonable expenses = "+ifs50+"\nIncome = "+ifs5
++"\n\n"
++"\n\nInterest on bank deposit 1 (gross) = "+ ifb1
++"\n\nInterest on bank deposit 2 (gross) = "+ ifb2
++"\n\nInterest on bank deposit 3 (gross) = "+ ifb3
++"\n\n"
++"\n\nInterest on P.O. savings bank account = "+ iopaipoa +"\n Less:Exemption (individual a/c: upto 3500 & Joint a/c: upto 7000) = "+poaae+"\nIncome = "+poaaa
++"\n\n"
++"\n\nInterest on public account in P.O = "+ poaa +"\n Less:Exemption (upto 5000) = "+iopaipoae+"\nIncome = "+iopaipoaa
++"\n\n"
++"\n\nInterest from co-operative bank 1 = "+ ifcb1
++"\n\nInterest from co-operative bank 1 = "+ ifcb2
++"\n\nInterest from co-operative bank 1 = "+ ifcb3
++"\n\n"
++"\n\nWinnings from lotteries = "+ ci1
++"\n\nWinnings from crossword puzzles = "+ ci2
++"\n\nWinnings from card games = "+ ci3
++"\n\nWinnings from other games = "+ ci4
++"\n\nBetting, Gambling games = "+ ci5
++"\n\nWinnings from horse race = "+ (cihr+cihre) + "\n Less:Expenses for owning and maintaining horses = "+cihre+"\nIncome = "+cihr
++"\n\n"
++"\n\nInterest received on compensation/ enhanced compensation = "+ iroc + "\n Less:Exemption @50% = "+ iroca +"\nIncome = "+iroca
++"\n\n"
++"\n\nIncome from letting out hire of furniture, machinery, etc = "+ iflo + "\n Less:Current repairs = "+ iflo1 + "\n Less:Insurance premium paid = "+ iflo2 + "\n Less:Depreciation = "+ iflo3 +"\nIncome = "+ifloa
++"\n\n"
++"\n\nIncome from sub letting of house property = "+ ifsl + "\n Less:Proportion of rent paid = "+ ifsl1 + "\n Less:Proportion of municipal tax paid = "+ ifsl2 +"\nIncome = "+ifsla
++"\n\n"
++"\n\nFamily pension = "+ (fp+fp3) + "\n Less:Exemption of 1/3 or 15000 whichever is lower = "+ fp3 +"\nIncome = "+fp
++"\n\n"
++"\n\nIncome from undisclosed sources = "+ ifus
++"\n\nAgricultural Income received outside India = "+ airoi
++"\n\nComposite rent = "+ cr
++"\n\nSalary of MP, MLA, or Council = "+ somp
++"\n\nDirector fees = "+ df
++"\n\nRent from a vacant land = "+ rfavl
++"\n\nIncome from royalty = "+ ifr
++"\n\nRent of Trade Mark = "+ rotm
++"\n\nRemuneration received from a person other than his employer for evaluation of answer scripts = "+ rrfas
++"\n\nIncome from private tution = "+ ifpt
++"\n\nRemuneration from writing articles in journals = "+ rfwa
++"\n\nAny sum received under a Keyman Insurance Policy = "+ kip
++"\n\n"
++"\n\nIncome from other sources = "+ ifs
+;
+
+}
+</script>
+</body>
+</html>
