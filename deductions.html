@@ -16,7 +16,10 @@ padding: 10px;
 text-align: left;}
 
 th 
-{background-color: #f2f2f2;}
+{background-color: #f2f2f2;} 
+
+th:first-child,
+td:first-child {width: 40%;}
 
 </style>
 
@@ -202,7 +205,7 @@ Sum assured &nbsp; : <INPUT Type="text" Name="sa">
 <tr>
 <th> Contribution to pension scheme of Central Government or any other employer : </th>
 <td>
-Amount contributed : <INPUT Type="text" Name="ccd"> <br><br>
+Amount contributed by assessee : <INPUT Type="text" Name="ccd"> <br><br>
 Employer's contribution (if any) : <INPUT Type="text" Name="ccder">
 </td>
 </tr>
@@ -241,6 +244,95 @@ Amount paid : <INPUT Type="text" Name="mip3">
 </tr>
 
 <tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Expenditure incurred for a Disabled Dependent (spouse, children, parents, brothers & sisters) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="dd"><br><br>
+Type of Disability : <select name="ddis"><option>No Disability</option><option>Normal Disability</option><option>Severe Disability</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Expenditure incurred on the medical treatment of individual or dependent in respect of specified diseases like Neurological diseases, Cancer, AIDS, Chronic Renal failure, Hemophilia,Thalassaemia : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ddb">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to Political parties (mode of payment should be other than cash) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ggc">
+</td>
+</tr>
+
+<tr>
+<th colspan="2">Donations : </th>
+</tr>
+
+<tr>
+<td colspan="2">
+Donation to The National Defence Fund : <INPUT Type="text" Name="d1" style="width: 20%;"><hr>
+Prime Minister's National Relief Fund : <INPUT Type="text" Name="d2" style="width: 20%;"><hr>
+The Africa (Public Contributions - India) Fund : <INPUT Type="text" Name="d3" style="width: 20%;"><hr>
+The National Foundation for Communal Harmony : <INPUT Type="text" Name="d4" style="width: 20%;"><hr>
+A University or Educational Institution of National Eminence : <INPUT Type="text" Name="d5" style="width: 20%;"><hr>
+Zila Saksharatha Samithis : <INPUT Type="text" Name="d6" style="width: 20%;"><hr>
+National Blood Transfusion Council and State Councils : <INPUT Type="text" Name="d7" style="width: 20%;"><hr>
+Any fund set up by State Governments to provide medical relief to the poor : <INPUT Type="text" Name="d8" style="width: 20%;"><hr>
+The Chief Minister's Relief Fund : <INPUT Type="text" Name="d9" style="width: 20%;"><hr>
+National Illness Fund : <INPUT Type="text" Name="d10" style="width: 20%;"><hr>
+National Sports Fund : <INPUT Type="text" Name="d11" style="width: 20%;"><hr>
+National Cultural Fund : <INPUT Type="text" Name="d12" style="width: 20%;"><hr>
+National Children Fund : <INPUT Type="text" Name="d13" style="width: 20%;"><hr>
+National Fund for Control of Drug Abuse : <INPUT Type="text" Name="d14" style="width: 20%;"><hr>
+Swachh Bharat Kosh : <INPUT Type="text" Name="d15" style="width: 20%;"><hr>
+Clean Ganga Fund : <INPUT Type="text" Name="d16" style="width: 20%;"><hr>
+National Fund for Control of Drug Abuse : <INPUT Type="text" Name="d17" style="width: 20%;"><hr>
+Jawaharlal Nehru Memorial Fund : <INPUT Type="text" Name="d18" style="width: 20%;"><hr>
+Prime Minister's Drought Relief Fund : <INPUT Type="text" Name="d19" style="width: 20%;"><hr>
+Indira Gandhi Memorial Trust : <INPUT Type="text" Name="d20" style="width: 20%;"><hr>
+Rajiv Gandhi Foundation : <INPUT Type="text" Name="d21" style="width: 20%;"><hr>
+Donations to the Government or local authority, institutions of associations for the purpose of promoting family planning : <INPUT Type="text" Name="d22" style="width: 20%;"><hr>
+Sums paid by a Company to the Indian Olympic Association : <INPUT Type="text" Name="d23" style="width: 20%;"><hr>
+To the Government or any local authority to be utilised for any charitable purpose : <INPUT Type="text" Name="d24" style="width: 20%;"><hr>
+To any other fund or any institution which is established in India for a charitable purpose : <INPUT Type="text" Name="d25" style="width: 20%;"><hr>
+To an authority for the purpose of dealing with housing accommodation or for the purpose of planning, development and improvement of cities, towns, or villages : <INPUT Type="text" Name="d26" style="width: 20%;"><hr>
+To any corporation established by the Government for promoting the interests of the members of minority community : <INPUT Type="text" Name="d27" style="width: 20%;"><hr>
+To any temple, mosque, church or gurdwara or any other place notified by the government for the renovation or repair : <INPUT Type="text" Name="d28" style="width: 20%;">
+</td>
+</tr>
+
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Deduction in respect of Royalty income of authors of certain books other than text books : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="qqb">
+</td>
+</tr>
+
+<tr>
+<th> Deduction in respect of Royalty income on Patents : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="rrb">
+</td>
+</tr>
+
+<tr>
+<th> Deduction in respect of Interest on deposits in savings accounts : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ttattb">
+</td>
+</tr>
+
+<tr>
 <th colspan="2"><br>
 <div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="D()" style="width: 100%;"></div>
 <br>
@@ -259,7 +351,7 @@ Amount paid : <INPUT Type="text" Name="mip3">
 <tr>
 <th>Steps : </th>
 <td>
-<textarea name="steps" rows="150" cols="100">
+<textarea name="steps" rows="275" cols="100">
 </textarea>
 </td>
 </tr>
@@ -367,11 +459,70 @@ mip3l=Math.min(5000,mip3);
 mip01=Math.min(25000,(mip2l+mip1l+mip3l));
 mip02=Math.min(50000,(mip2scl+mip1scl));
 
+var dd, dd1, ddb, ddb1, ggc, qqb, qqb1, rrb, rrb1, ttattb, ttattb1, ttb, u;
+dd=Number(document.d.dd.value);
+if (document.d.ddis.value=="No Disability") {dd1=0;}
+else if (document.d.ddis.value=="Normal Disability") {dd1=75000;} 
+else if (document.d.ddis.value=="Severe Disability") {dd1=125000;}
+ddb=Number(document.d.ddb.value);
+if (document.d.cit.value=="Individual other than Senior Citizen") {ddb1=Math.min(ddb,40000);} else {ddb1=Math.min(ddb,100000);}
+ggc=Number(document.d.ggc.value);
+qqb=Number(document.d.qqb.value);
+qqb1=Math.min(qqb,300000);
+rrb=Number(document.d.rrb.value);
+rrb1=Math.min(rrb,300000);
+ttattb=Number(document.d.ttattb.value);
+if (document.d.cit.value=="Individual other than Senior Citizen") {ttattb1=Math.min(ttattb,10000);} else {ttattb1=Math.min(ttattb,50000);}
+if (document.d.dis.value=="No Disability") {u=0;} 
+else if(document.d.dis.value=="Normal Disability") {u=75000;}
+else if (document.d.dis.value=="Severe Disability") {u=125000;}
 
+var d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28;
+d1=Number(document.d.d1.value);
+d2=Number(document.d.d2.value);
+d3=Number(document.d.d3.value);
+d4=Number(document.d.d4.value);
+d5=Number(document.d.d5.value);
+d6=Number(document.d.d6.value);
+d7=Number(document.d.d7.value);
+d8=Number(document.d.d8.value);
+d9=Number(document.d.d9.value);
+d10=Number(document.d.d10.value);
+d11=Number(document.d.d11.value);
+d12=Number(document.d.d12.value);
+d13=Number(document.d.d13.value);
+d14=Number(document.d.d14.value);
+d15=Number(document.d.d15.value);
+d16=Number(document.d.d16.value);
+d17=Number(document.d.d17.value);
+d18=Number(document.d.d18.value);
+d19=Number(document.d.d19.value);
+d20=Number(document.d.d20.value);
+d21=Number(document.d.d21.value);
+d22=Number(document.d.d22.value);
+d23=Number(document.d.d23.value);
+d24=Number(document.d.d24.value);
+d25=Number(document.d.d25.value);
+d26=Number(document.d.d26.value);
+d27=Number(document.d.d27.value);
+d28=Number(document.d.d28.value);
 
 var dans;
-dans=cwl+ccder+mip01+mip02;
-document.d.dans.value = dans;
+dans=cwl+ccder+mip01+mip02+dd1+ddb1+ggc+qqb1+rrb1+ttattb1+u;
+
+var d100nl, d50nl, qa, d100wl, d50wl, d100wla, d50wla, qab;
+d100nl=d1+d2+d3+d4+d5+d6+d7+d8+d9+d10+d11+d12+d13+d14+d15+d16+d17;
+d50nl=(d18+d19+d20+d21)*50/100;
+qa=(gti-ltcg-stcgs-ci-dans)*10/100;
+d100wl=d22+d23;
+d50wl=d24+d25+d26+d27+d28;
+if (qa>d100wl) {d100wla=d100wl; qab=qa-d100wl; if (qab>d50wl) {d50wla=d50wl*50/100;} else if (qab<=d50wl) {d50wla=qab*50/100}} else {d100wla=qa; d50wla=0;}
+
+var danss;
+danss=cwl+ccder+mip01+mip02+dd1+ddb1+ggc+qqb1+rrb1+ttattb1+u+d100nl+d50nl+d100wla+d50wla;
+document.d.dans.value = danss;
+
+
 
 document.d.steps.value = "Computation of Deduction from Gross Total Income"+
 "\n\nDeductions: "
@@ -410,6 +561,60 @@ document.d.steps.value = "Computation of Deduction from Gross Total Income"+
 +"\n\n◉Medical expenses incurred for senior citizen = "+ mip23
 +"\n\n―→Maximum deduction for parents = "+ mip02
 +"\n\n\n\n―→Total deduction under section 80D = "+ (mip01+mip02)
++"\n\n\n\n―→Under section 80DD : "
++"\n\n◉Expenditure incurred for a Disabled Dependent = "+ dd1
++"\n\n\n\n―→Under section 80DDB : "
++"\n\n◉Expenditure incurred on the medical treatment of individual or dependent in respect of specified diseases = "+ ddb1
+
++"\n\n\n\n―→Under section 80G : "
++"\n\n―→100% no limit donations : "
++"\n\n◉Donation to The National Defence Fund = "+ d1
++"\n\n◉Prime Minister's National Relief Fund = "+ d2
++"\n\n◉The Africa (Public Contributions - India) Fund = "+ d3
++"\n\n◉The National Foundation for Communal Harmony = "+ d4
++"\n\n◉A University or Educational Institution of National Eminence = "+ d5
++"\n\n◉Zila Saksharatha Samithis = "+ d6
++"\n\n◉National Blood Transfusion Council and State Councils = "+ d7
++"\n\n◉Any fund set up by State Governments to provide medical relief to the poor = "+ d8
++"\n\n◉The Chief Minister's Relief Fund = "+ d9
++"\n\n◉National Illness Fund = "+ d10
++"\n\n◉National Sports Fund  = "+ d11
++"\n\n◉National Cultural Fund = "+ d12
++"\n\n◉National Children Fund = "+ d13
++"\n\n◉National Fund for Control of Drug Abuse = "+ d14
++"\n\n◉Swachh Bharat Kosh = "+ d15
++"\n\n◉Clean Ganga Fund = "+ d16
++"\n\n◉National Fund for Control of Drug Abuse = "+ d17
++"\n\n―→Total of 100% no limit donations = "+d100nl
++"\n\n\n\n―→50% no limit donations : "
++"\n\n◉Jawaharlal Nehru Memorial Fund = "+ d18
++"\n\n◉Prime Minister's Drought Relief Fund = "+ d19
++"\n\n◉Indira Gandhi Memorial Trust  = "+ d20
++"\n\n◉Rajiv Gandhi Foundation = "+ d21
++"\n\n―→Total of 50% no limit donations = "+d50nl
++"\n\n\n\n―→100% with limit donations : "
++"\n\n◉Donations to the Government or local authority, institutions of associations for the purpose of promoting family planning = "+ d22
++"\n\n◉Sums paid by a Company to the Indian Olympic Association = "+ d23
++"\n\n―→Total of 100% with limit donations = "+d100wla
++"\n\n\n\n―→50% no limit donations : "
++"\n\n◉To the Government or any local authority to be utilised for any charitable purpose = "+ d24
++"\n\n◉To any other fund or any institution which is established in India for a charitable purpose = "+ d25
++"\n\n◉To an authority for the purpose of dealing with housing accommodation or for the purpose of planning, development and improvement of cities, towns, or villages = "+ d26
++"\n\n◉To any corporation established by the Government for promoting the interests of the members of minority community  = "+ d27
++"\n\n◉To any temple, mosque, church or gurdwara or any other place notified by the government for the renovation or repair = "+ d28
++"\n\n―→Total of 50% no limit donations = "+d50wla
++"\n\n\n\n―→Total deduction under section 80G = "+ (d100nl+d50nl+d100wla+d50wla)
+
++"\n\n\n\n―→Under section 80GGC : "
++"\n\n◉Contribution to Political parties = "+ ggc
++"\n\n\n\n―→Under section 80QQB : "
++"\n\n◉Deduction in respect of Royalty income of authors of certain books other than text books = "+ qqb1
++"\n\n\n\n―→Under section 80RRB : "
++"\n\n◉Deduction in respect of Royalty income on Patents = "+ rrb1
++"\n\n\n\n―→Under section 80TTA (for normal citizen) or 80TTB (for senior citizen) : "
++"\n\n◉Deduction in respect of Interest on deposits in savings accounts = "+ ttattb1
++"\n\n\n\n―→Under section 80U : "
++"\n\n◉Deduction in case of a person with disability = "+ u
 +"\n\n\n\n―→Total deduction = "+dans
 ;
 
