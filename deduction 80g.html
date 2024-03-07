@@ -1,0 +1,624 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 50%;}
+select {font-size: 2vw; width: 60%;}
+textarea {font-size: 2vw; width: 100%; white-space:  overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;} 
+
+th:first-child,
+td:first-child {width: 40%;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #9c999a; white-space: nowrap;  font-size: 3vw;">Computation of Deduction from Gross Total Income with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="d">
+
+<tr>
+<th> Type of Individual : </th>
+<td>
+<select name="cit"><option>Individual other than Senior Citizen</option><option>Senior Citizen</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Disability (if any) : </th>
+<td>
+<select name="dis"><option>No Disability</option><option>Normal Disability</option><option>Severe Disability</option></select></td>
+</tr>
+
+<tr>
+<th> Gross Total Income : </th>
+<td>
+<INPUT Type="text" Name="gti">
+</td>
+</tr>
+
+<tr>
+<th> Salary (if any) : </th>
+<td>
+<INPUT Type="text" Name="s">
+</td>
+</tr>
+
+<tr>
+<th> Long-Term Capital Gain (if any) : </th>
+<td>
+<INPUT Type="text" Name="ltcg">
+</td>
+</tr>
+
+<tr>
+<th> Short-Term Capital Gain - Section 111A (if any) : </th>
+<td>
+<INPUT Type="text" Name="stcgs">
+</td>
+</tr>
+
+<tr>
+<th> Casual Income (gross) (if any) : </th>
+<td>
+<INPUT Type="text" Name="ci">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Life Insurace Premium : </th>
+<td>
+Premium paid : <INPUT Type="text" Name="lip"> <br><br>
+Sum assured &nbsp; : <INPUT Type="text" Name="sa">
+</td>
+</tr>
+
+<tr>
+<th> Amount paid for a contract of annuity on the life of self, spouse or children : </th>
+<td>
+<INPUT Type="text" Name="c2">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Statutory Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c3">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Recognised Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c4">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Public Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c5">
+</td>
+</tr>
+
+<tr>
+<th> Contribution in the name of self, spouse or children for participation in the ULIP of UTI or LIC Mutual Fund : </th>
+<td>
+<INPUT Type="text" Name="c6">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to Pension fund set up by any notified mutual fund like UTI, NHB : </th>
+<td>
+<INPUT Type="text" Name="c7">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to National Savings Certificates (NSC) VIII Issue and IX Issue : </th>
+<td>
+<INPUT Type="text" Name="c8">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to any such security of the Central Government or any such deposit scheme notified by the Government : </th>
+<td>
+<INPUT Type="text" Name="c9">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to the bonds issued by NABARD : </th>
+<td>
+<INPUT Type="text" Name="c10">
+</td>
+</tr>
+
+<tr>
+<th> Repayment of loan taken for construction or purchase of house property : </th>
+<td>
+<INPUT Type="text" Name="c11">
+</td>
+</tr>
+
+<tr>
+<th> Deposit in Five Yer Post Office Time Deposit Account : </th>
+<td>
+<INPUT Type="text" Name="c12">
+</td>
+</tr>
+
+<tr>
+<th> Deposit in Senior Citizen Savings Scheme, 2004 : </th>
+<td>
+<INPUT Type="text" Name="c13">
+</td>
+</tr>
+
+<tr>
+<th> Tution fee paid for full time education of two children in India : </th>
+<td>
+<INPUT Type="text" Name="c14">
+</td>
+</tr>
+
+<tr>
+<th> Investment made under Sukanya Samridhi Account for deposit for girl child (maximum for 2 girl children) : </th>
+<td>
+<INPUT Type="text" Name="c15">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to pension fund : </th>
+<td>
+<INPUT Type="text" Name="ccc">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to pension scheme of Central Government or any other employer : </th>
+<td>
+Amount contributed by assessee : <INPUT Type="text" Name="ccd"> <br><br>
+Employer's contribution (if any) : <INPUT Type="text" Name="ccder">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Medical Insurance Premium (For assessee, spouse, dependent children of the assessee) <br> (mode of payment should be other than cash) : </th>
+<td>
+Premium amount paid : <INPUT Type="text" Name="mip1">
+</td>
+</tr>
+
+<tr>
+<th> Medical Insurance Premium (For parents of the assessee) <br> (mode of payment should be other than cash) : </th>
+<td>
+Premium amount paid for Parent 1 : <INPUT Type="text" Name="mip21"><br><br>Age of Parent 1 : <select name="sc1"><option>Senior Citizen</option><option>Not a Senior Citizen</option></select><br><br><br> 
+Premium amount paid for Parent 2 : <INPUT Type="text" Name="mip22"><br><br>Age of Parent 2 : <select name="sc2"><option>Senior Citizen</option><option>Not a Senior Citizen</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Medical expenses incurred for senior citizen only <br> (mode of payment should be other than cash) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="mip23">
+</td>
+</tr>
+
+<tr>
+<th> Preventive Health Check-Up of the assessee or his family or his parents <br> (any mode of payment) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="mip3">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Expenditure incurred for a Disabled Dependent (spouse, children, parents, brothers & sisters) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="dd"><br><br>
+Type of Disability : <select name="ddis"><option>No Disability</option><option>Normal Disability</option><option>Severe Disability</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Expenditure incurred on the medical treatment of individual or dependent in respect of specified diseases like Neurological diseases, Cancer, AIDS, Chronic Renal failure, Hemophilia,Thalassaemia : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ddb">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to Political parties (mode of payment should be other than cash) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ggc">
+</td>
+</tr>
+
+<tr>
+<th colspan="2">Donations : </th>
+</tr>
+
+<tr>
+<td colspan="2">
+Donation to The National Defence Fund : <INPUT Type="text" Name="d1" style="width: 20%;"><hr>
+Prime Minister's National Relief Fund : <INPUT Type="text" Name="d2" style="width: 20%;"><hr>
+The Africa (Public Contributions - India) Fund : <INPUT Type="text" Name="d3" style="width: 20%;"><hr>
+The National Foundation for Communal Harmony : <INPUT Type="text" Name="d4" style="width: 20%;"><hr>
+A University or Educational Institution of National Eminence : <INPUT Type="text" Name="d5" style="width: 20%;"><hr>
+Zila Saksharatha Samithis : <INPUT Type="text" Name="d6" style="width: 20%;"><hr>
+National Blood Transfusion Council and State Councils : <INPUT Type="text" Name="d7" style="width: 20%;"><hr>
+Any fund set up by State Governments to provide medical relief to the poor : <INPUT Type="text" Name="d8" style="width: 20%;"><hr>
+The Chief Minister's Relief Fund : <INPUT Type="text" Name="d9" style="width: 20%;"><hr>
+National Illness Fund : <INPUT Type="text" Name="d10" style="width: 20%;"><hr>
+National Sports Fund : <INPUT Type="text" Name="d11" style="width: 20%;"><hr>
+National Cultural Fund : <INPUT Type="text" Name="d12" style="width: 20%;"><hr>
+National Children Fund : <INPUT Type="text" Name="d13" style="width: 20%;"><hr>
+National Fund for Control of Drug Abuse : <INPUT Type="text" Name="d14" style="width: 20%;"><hr>
+Swachh Bharat Kosh : <INPUT Type="text" Name="d15" style="width: 20%;"><hr>
+Clean Ganga Fund : <INPUT Type="text" Name="d16" style="width: 20%;"><hr>
+National Fund for Control of Drug Abuse : <INPUT Type="text" Name="d17" style="width: 20%;"><hr>
+Jawaharlal Nehru Memorial Fund : <INPUT Type="text" Name="d18" style="width: 20%;"><hr>
+Prime Minister's Drought Relief Fund : <INPUT Type="text" Name="d19" style="width: 20%;"><hr>
+Indira Gandhi Memorial Trust : <INPUT Type="text" Name="d20" style="width: 20%;"><hr>
+Rajiv Gandhi Foundation : <INPUT Type="text" Name="d21" style="width: 20%;"><hr>
+Donations to the Government or local authority, institutions of associations for the purpose of promoting family planning : <INPUT Type="text" Name="d22" style="width: 20%;"><hr>
+Sums paid by a Company to the Indian Olympic Association : <INPUT Type="text" Name="d23" style="width: 20%;"><hr>
+To the Government or any local authority to be utilised for any charitable purpose : <INPUT Type="text" Name="d24" style="width: 20%;"><hr>
+To any other fund or any institution which is established in India for a charitable purpose : <INPUT Type="text" Name="d25" style="width: 20%;"><hr>
+To an authority for the purpose of dealing with housing accommodation or for the purpose of planning, development and improvement of cities, towns, or villages : <INPUT Type="text" Name="d26" style="width: 20%;"><hr>
+To any corporation established by the Government for promoting the interests of the members of minority community : <INPUT Type="text" Name="d27" style="width: 20%;"><hr>
+To any temple, mosque, church or gurdwara or any other place notified by the government for the renovation or repair : <INPUT Type="text" Name="d28" style="width: 20%;">
+</td>
+</tr>
+
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Deduction in respect of Royalty income of authors of certain books other than text books : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="qqb">
+</td>
+</tr>
+
+<tr>
+<th> Deduction in respect of Royalty income on Patents : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="rrb">
+</td>
+</tr>
+
+<tr>
+<th> Deduction in respect of Interest on deposits in savings accounts : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="ttattb">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="D()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Deductions u/s 80G: </th>
+<td>
+<INPUT Type="text" Name="dans">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="275" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function D()
+{
+var gti, s, ltcg, stcgs, ci;
+var dans;
+
+gti=Number(document.d.gti.value);
+s=Number(document.d.s.value);
+ltcg=Number(document.d.ltcg.value);
+stcgs=Number(document.d.stcgs.value);
+ci=Number(document.d.ci.value);
+
+var sa, lip1, lip;
+if (document.d.dis.value=="No Disability") {sa=Number(document.d.sa.value)*10/100; lip1=Number(document.d.lip.value); lip=Math.min(sa,lip1);}
+else if (document.d.dis.value=="Normal Disability" || document.d.dis.value=="Severe Disability") {sa=Number(document.d.sa.value)*15/100; lip1=Number(document.d.lip.value); lip=Math.min(sa,lip1);}
+
+var c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, ccc;
+c2=Number(document.d.c2.value);
+c3=Number(document.d.c3.value);
+c4=Number(document.d.c4.value);
+c5=Number(document.d.c5.value);
+c6=Number(document.d.c6.value);
+c7=Number(document.d.c7.value);
+c8=Number(document.d.c8.value);
+c9=Number(document.d.c9.value);
+c10=Number(document.d.c10.value);
+c11=Number(document.d.c11.value);
+c12=Number(document.d.c12.value);
+c13=Number(document.d.c13.value);
+c14=Number(document.d.c14.value);
+c15=Number(document.d.c15.value);
+ccc=Number(document.d.ccc.value);
+
+var ccd;
+ccd=Number(document.d.ccd.value);
+
+if (ccd<=0)
+{
+var cwol, cl, cwl;
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc;
+cl=150000;
+}
+else if (ccd>0) 
+{
+if (s<=0) 
+{var gti20, ccdans, cwol, cl, cwl;
+gti20=gti*20/100;
+ccdans=Math.min(ccd,gti20);
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc+ ccdans;
+cl=200000;}
+else if (s>0) 
+{var s10, ccdans, cwol, cl, cwl;
+s10=s*10/100;
+ccdans=Math.min(ccd,s10);
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc+ ccdans;
+cl=200000;}
+} 
+
+cwl=Math.min(cwol,cl);
+
+var ccder;
+ccder=Number(document.d.ccder.value);
+
+
+
+var mip1scl, mip1l, mip1, mip21, mip22, mip23, mip21scl, mip22scl, mip21l, mip22l, mip2l, mip2scl, mip1scl, mip1l;
+mip1=Number(document.d.mip1.value);
+mip21=Number(document.d.mip21.value);
+mip22=Number(document.d.mip22.value);
+mip23=Number(document.d.mip23.value);
+
+if (document.d.cit.value=="Senior Citizen")
+{mip1scl=Math.min(mip1,50000); mip1l=0;} else {mip1l=Math.min(mip1,25000); mip1scl=0;}
+
+if (document.d.sc1.value=="Senior Citizen"){mip21scl=Math.min(mip21,50000); mip21l=0;} else {mip21l=Math.min(mip21,25000); mip21scl=0;}
+if (document.d.sc2.value=="Senior Citizen"){mip22scl=Math.min(mip22,50000); mip22l=0;} else {mip22l=Math.min(mip22,25000); mip22scl=0;}
+mip23=Number(document.d.mip23.value);
+mip2scl=Math.min(50000, (mip21scl+mip22scl+mip23));
+mip2l=Math.min(25000,(mip21l+mip22l));
+
+var mip3, mip3l, mip01, mip02;
+mip3=Number(document.d.mip3.value);
+mip3l=Math.min(5000,mip3);
+mip01=Math.min(25000,(mip2l+mip1l+mip3l));
+mip02=Math.min(50000,(mip2scl+mip1scl));
+
+var dd, dd1, ddb, ddb1, ggc, qqb, qqb1, rrb, rrb1, ttattb, ttattb1, ttb, u;
+dd=Number(document.d.dd.value);
+if (document.d.ddis.value=="No Disability") {dd1=0;}
+else if (document.d.ddis.value=="Normal Disability") {dd1=75000;} 
+else if (document.d.ddis.value=="Severe Disability") {dd1=125000;}
+ddb=Number(document.d.ddb.value);
+if (document.d.cit.value=="Individual other than Senior Citizen") {ddb1=Math.min(ddb,40000);} else {ddb1=Math.min(ddb,100000);}
+ggc=Number(document.d.ggc.value);
+qqb=Number(document.d.qqb.value);
+qqb1=Math.min(qqb,300000);
+rrb=Number(document.d.rrb.value);
+rrb1=Math.min(rrb,300000);
+ttattb=Number(document.d.ttattb.value);
+if (document.d.cit.value=="Individual other than Senior Citizen") {ttattb1=Math.min(ttattb,10000);} else {ttattb1=Math.min(ttattb,50000);}
+if (document.d.dis.value=="No Disability") {u=0;} 
+else if(document.d.dis.value=="Normal Disability") {u=75000;}
+else if (document.d.dis.value=="Severe Disability") {u=125000;}
+
+var d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28;
+d1=Number(document.d.d1.value);
+d2=Number(document.d.d2.value);
+d3=Number(document.d.d3.value);
+d4=Number(document.d.d4.value);
+d5=Number(document.d.d5.value);
+d6=Number(document.d.d6.value);
+d7=Number(document.d.d7.value);
+d8=Number(document.d.d8.value);
+d9=Number(document.d.d9.value);
+d10=Number(document.d.d10.value);
+d11=Number(document.d.d11.value);
+d12=Number(document.d.d12.value);
+d13=Number(document.d.d13.value);
+d14=Number(document.d.d14.value);
+d15=Number(document.d.d15.value);
+d16=Number(document.d.d16.value);
+d17=Number(document.d.d17.value);
+d18=Number(document.d.d18.value);
+d19=Number(document.d.d19.value);
+d20=Number(document.d.d20.value);
+d21=Number(document.d.d21.value);
+d22=Number(document.d.d22.value);
+d23=Number(document.d.d23.value);
+d24=Number(document.d.d24.value);
+d25=Number(document.d.d25.value);
+d26=Number(document.d.d26.value);
+d27=Number(document.d.d27.value);
+d28=Number(document.d.d28.value);
+
+var dans;
+dans=cwl+ccder+mip01+mip02+dd1+ddb1+ggc+qqb1+rrb1+ttattb1+u;
+
+var d100nl, d50nl, qa, d100wl, d50wl, d100wla, d50wla, qab;
+d100nl=d1+d2+d3+d4+d5+d6+d7+d8+d9+d10+d11+d12+d13+d14+d15+d16+d17;
+d50nl=(d18+d19+d20+d21)*50/100;
+qa=(gti-ltcg-stcgs-ci-dans)*10/100;
+d100wl=d22+d23;
+d50wl=d24+d25+d26+d27+d28;
+if (qa>d100wl) {d100wla=d100wl; qab=qa-d100wl; if (qab>d50wl) {d50wla=d50wl*50/100;} else if (qab<=d50wl) {d50wla=qab*50/100}} else {d100wla=qa; d50wla=0;}
+
+var danss;
+danss=cwl+ccder+mip01+mip02+dd1+ddb1+ggc+qqb1+rrb1+ttattb1+u+d100nl+d50nl+d100wla+d50wla;
+document.d.dans.value = d100nl+d50nl+d100wla+d50wla;
+
+
+
+document.d.steps.value = "Computation of Deduction from Gross Total Income"+
+"\n\nDeductions: "
++"\n\n―→Under Section 80C : "
++"\n\n◉Life insurance premium = "+lip
++"\n\n◉Amount paid for a contract of annuity on the life of self, spouse or children = "+c2
++"\n\n◉Statutory Provident Fund = "+c3
++"\n\n◉Recognised Provident Fund = "+c4
++"\n\n◉Public Provident Fund = "+c5
++"\n\n◉Contribution in the name of self, spouse or children for participation in the ULIP of UTI or LIC Mutual Fund = "+c6
++"\n\n◉Contribution to Pension fund set up by any notified mutual fund like UTI, NHB = "+c7
++"\n\n◉Subscription to National Savings Certificates (NSC) VIII Issue and IX Issue = "+c8
++"\n\n◉Subscription to any such security of the Central Government or any such deposit scheme notified by the Government = "+c9
++"\n\n◉Subscription to the bonds issued by NABARD = "+c10
++"\n\n◉Repayment of loan taken for construction or purchase of house property = "+c11
++"\n\n◉Deposit in Five Yer Post Office Time Deposit Account = "+c12
++"\n\n◉Deposit in Senior Citizen Savings Scheme, 2004 = "+c13
++"\n\n◉Tution fee paid for full time education of two children in India = "+c14
++"\n\n◉Investment made under Sukanya Samridhi Account for deposit for girl child (maximum for 2 girl children) = "+c15
++"\n\n\n\nUnder Section 80CCC : "
++"\n\n◉Contribution to pension fund = " + ccc
++"\n\n\n\n―→Under Section 80CCD(1) : "
++"\n\n◉Contribution to pension scheme of Central Government or any other employer = "+ ccd
++"\n\n―→But limited to (10% of Salary for salaried assessee or 20% of GTI for other assessee) = "+ ccdans
++"\n\n\n\n―→Total of the above = "+ cwol
++"\n\n―→But limited under section CCE = 150000"
++"\n\n―→Additional deduction under section CCD(1B) = "+ (cl-150000)
++"\n\n―→Total deduction (u/s 80C,80CCC, 80CCD(1)) = "+ cwl
++"\n\n\n\n―→Under section 80 CCD(2) : "
++"\n\n◉Employer's contribution = "+ ccder
++"\n\n\n\n―→Under Section 80D : "
++"\n\n◉Medical Insurance Premium (For assessee, spouse, dependent children of the assessee) = "+ mip1
++"\n\n◉Preventive Health Check-Up of the assessee or his family or his parents = "+ mip3
++"\n\n―→Maximum deduction for self and family = "+ mip01
++"\n\n\n\n◉Medical Insurance Premium (For parents of the assessee) = "+ (mip21+mip22)
++"\n\n◉Medical expenses incurred for senior citizen = "+ mip23
++"\n\n―→Maximum deduction for parents = "+ mip02
++"\n\n\n\n―→Total deduction under section 80D = "+ (mip01+mip02)
++"\n\n\n\n―→Under section 80DD : "
++"\n\n◉Expenditure incurred for a Disabled Dependent = "+ dd1
++"\n\n\n\n―→Under section 80DDB : "
++"\n\n◉Expenditure incurred on the medical treatment of individual or dependent in respect of specified diseases = "+ ddb1
+
++"\n\n\n\n―→Under section 80G : "
++"\n\n―→100% no limit donations : "
++"\n\n◉Donation to The National Defence Fund = "+ d1
++"\n\n◉Prime Minister's National Relief Fund = "+ d2
++"\n\n◉The Africa (Public Contributions - India) Fund = "+ d3
++"\n\n◉The National Foundation for Communal Harmony = "+ d4
++"\n\n◉A University or Educational Institution of National Eminence = "+ d5
++"\n\n◉Zila Saksharatha Samithis = "+ d6
++"\n\n◉National Blood Transfusion Council and State Councils = "+ d7
++"\n\n◉Any fund set up by State Governments to provide medical relief to the poor = "+ d8
++"\n\n◉The Chief Minister's Relief Fund = "+ d9
++"\n\n◉National Illness Fund = "+ d10
++"\n\n◉National Sports Fund  = "+ d11
++"\n\n◉National Cultural Fund = "+ d12
++"\n\n◉National Children Fund = "+ d13
++"\n\n◉National Fund for Control of Drug Abuse = "+ d14
++"\n\n◉Swachh Bharat Kosh = "+ d15
++"\n\n◉Clean Ganga Fund = "+ d16
++"\n\n◉National Fund for Control of Drug Abuse = "+ d17
++"\n\n―→Total of 100% no limit donations = "+d100nl
++"\n\n\n\n―→50% no limit donations : "
++"\n\n◉Jawaharlal Nehru Memorial Fund = "+ d18
++"\n\n◉Prime Minister's Drought Relief Fund = "+ d19
++"\n\n◉Indira Gandhi Memorial Trust  = "+ d20
++"\n\n◉Rajiv Gandhi Foundation = "+ d21
++"\n\n―→Total of 50% no limit donations = "+d50nl
++"\n\n\n\n―→100% with limit donations : "
++"\n\n◉Donations to the Government or local authority, institutions of associations for the purpose of promoting family planning = "+ d22
++"\n\n◉Sums paid by a Company to the Indian Olympic Association = "+ d23
++"\n\n―→Total of 100% with limit donations = "+d100wla
++"\n\n\n\n―→50% no limit donations : "
++"\n\n◉To the Government or any local authority to be utilised for any charitable purpose = "+ d24
++"\n\n◉To any other fund or any institution which is established in India for a charitable purpose = "+ d25
++"\n\n◉To an authority for the purpose of dealing with housing accommodation or for the purpose of planning, development and improvement of cities, towns, or villages = "+ d26
++"\n\n◉To any corporation established by the Government for promoting the interests of the members of minority community  = "+ d27
++"\n\n◉To any temple, mosque, church or gurdwara or any other place notified by the government for the renovation or repair = "+ d28
++"\n\n―→Total of 50% no limit donations = "+d50wla
++"\n\n\n\n―→Total deduction under section 80G = "+ (d100nl+d50nl+d100wla+d50wla)
+
++"\n\n\n\n―→Under section 80GGC : "
++"\n\n◉Contribution to Political parties = "+ ggc
++"\n\n\n\n―→Under section 80QQB : "
++"\n\n◉Deduction in respect of Royalty income of authors of certain books other than text books = "+ qqb1
++"\n\n\n\n―→Under section 80RRB : "
++"\n\n◉Deduction in respect of Royalty income on Patents = "+ rrb1
++"\n\n\n\n―→Under section 80TTA (for normal citizen) or 80TTB (for senior citizen) : "
++"\n\n◉Deduction in respect of Interest on deposits in savings accounts = "+ ttattb1
++"\n\n\n\n―→Under section 80U : "
++"\n\n◉Deduction in case of a person with disability = "+ u
++"\n\n\n\n―→Total deduction = "+dans
+;
+
+}
+</script>
+</body>
+</html>
