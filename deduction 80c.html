@@ -1,0 +1,355 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 50%;}
+select {font-size: 2vw; width: 60%;}
+textarea {font-size: 2vw; width: 100%;  overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #888586; white-space: nowrap;  font-size: 3vw;">Computation of Deduction Under Secton 80C, 80CCC, 80CCD(1), 80CCD(2)</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="d">
+
+<tr>
+<th> Type of Individual : </th>
+<td>
+<select name="cit"><option>Individual other than Senior Citizen</option><option>Senior Citizen</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Disability (if any) : </th>
+<td>
+<select name="dis"><option>No Disability</option><option>Normal Disability</option><option>Severe Disability</option></select></td>
+</tr>
+
+<tr>
+<th> Gross Total Income : </th>
+<td>
+<INPUT Type="text" Name="gti">
+</td>
+</tr>
+
+<tr>
+<th> Salary (if any) : </th>
+<td>
+<INPUT Type="text" Name="s">
+</td>
+</tr>
+
+<tr>
+<th> Long-Term Capital Gain (if any) : </th>
+<td>
+<INPUT Type="text" Name="ltcg">
+</td>
+</tr>
+
+<tr>
+<th> Short-Term Capital Gain - Section 111A (if any) : </th>
+<td>
+<INPUT Type="text" Name="stcgs">
+</td>
+</tr>
+
+<tr>
+<th> Casual Income (gross) (if any) : </th>
+<td>
+<INPUT Type="text" Name="ci">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Life Insurace Premium : </th>
+<td>
+Premium paid : <INPUT Type="text" Name="lip"> <br><br>
+Sum assured &nbsp; : <INPUT Type="text" Name="sa">
+</td>
+</tr>
+
+<tr>
+<th> Amount paid for a contract of annuity on the life of self, spouse or children : </th>
+<td>
+<INPUT Type="text" Name="c2">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Statutory Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c3">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Recognised Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c4">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to a Public Provident Fund : </th>
+<td>
+<INPUT Type="text" Name="c5">
+</td>
+</tr>
+
+<tr>
+<th> Contribution in the name of self, spouse or children for participation in the ULIP of UTI or LIC Mutual Fund : </th>
+<td>
+<INPUT Type="text" Name="c6">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to Pension fund set up by any notified mutual fund like UTI, NHB : </th>
+<td>
+<INPUT Type="text" Name="c7">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to National Savings Certificates (NSC) VIII Issue and IX Issue : </th>
+<td>
+<INPUT Type="text" Name="c8">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to any such security of the Central Government or any such deposit scheme notified by the Government : </th>
+<td>
+<INPUT Type="text" Name="c9">
+</td>
+</tr>
+
+<tr>
+<th> Subscription to the bonds issued by NABARD : </th>
+<td>
+<INPUT Type="text" Name="c10">
+</td>
+</tr>
+
+<tr>
+<th> Repayment of loan taken for construction or purchase of house property : </th>
+<td>
+<INPUT Type="text" Name="c11">
+</td>
+</tr>
+
+<tr>
+<th> Deposit in Five Yer Post Office Time Deposit Account : </th>
+<td>
+<INPUT Type="text" Name="c12">
+</td>
+</tr>
+
+<tr>
+<th> Deposit in Senior Citizen Savings Scheme, 2004 : </th>
+<td>
+<INPUT Type="text" Name="c13">
+</td>
+</tr>
+
+<tr>
+<th> Tution fee paid for full time education of two children in India : </th>
+<td>
+<INPUT Type="text" Name="c14">
+</td>
+</tr>
+
+<tr>
+<th> Investment made under Sukanya Samridhi Account for deposit for girl child (maximum for 2 girl children) : </th>
+<td>
+<INPUT Type="text" Name="c15">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to pension fund : </th>
+<td>
+<INPUT Type="text" Name="ccc">
+</td>
+</tr>
+
+<tr>
+<th> Contribution to pension scheme of Central Government or any other employer : </th>
+<td>
+Amount contributed : <INPUT Type="text" Name="ccd"> <br><br>
+Employer's contribution (if any) : <INPUT Type="text" Name="ccder">
+</td>
+</tr>
+
+
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="D()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Deductions : </th>
+<td>
+<INPUT Type="text" Name="dans">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="100" cols="100" >
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function D()
+{
+var gti, s, ltcg, stcgs, ci;
+var dans;
+
+gti=Number(document.d.gti.value);
+s=Number(document.d.s.value);
+ltcg=Number(document.d.ltcg.value);
+stcgs=Number(document.d.stcgs.value);
+ci=Number(document.d.ci.value);
+
+var sa, lip1, lip;
+if (document.d.dis.value=="No Disability") {sa=Number(document.d.sa.value)*10/100; lip1=Number(document.d.lip.value); lip=Math.min(sa,lip1);}
+else if (document.d.dis.value=="Normal Disability" || document.d.dis.value=="Severe Disability") {sa=Number(document.d.sa.value)*15/100; lip1=Number(document.d.lip.value); lip=Math.min(sa,lip1);}
+
+var c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, ccc;
+c2=Number(document.d.c2.value);
+c3=Number(document.d.c3.value);
+c4=Number(document.d.c4.value);
+c5=Number(document.d.c5.value);
+c6=Number(document.d.c6.value);
+c7=Number(document.d.c7.value);
+c8=Number(document.d.c8.value);
+c9=Number(document.d.c9.value);
+c10=Number(document.d.c10.value);
+c11=Number(document.d.c11.value);
+c12=Number(document.d.c12.value);
+c13=Number(document.d.c13.value);
+c14=Number(document.d.c14.value);
+c15=Number(document.d.c15.value);
+ccc=Number(document.d.ccc.value);
+
+var ccd;
+ccd=Number(document.d.ccd.value);
+
+if (ccd<=0)
+{
+var cwol, cl, cwl;
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc;
+cl=150000;
+}
+else if (ccd>0) 
+{
+if (s<=0) 
+{var gti20, ccdans, cwol, cl, cwl;
+gti20=gti*20/100;
+ccdans=Math.min(ccd,gti20);
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc+ ccdans;
+cl=200000;}
+else if (s>0) 
+{var s10, ccdans, cwol, cl, cwl;
+s10=s*10/100;
+ccdans=Math.min(ccd,s10);
+cwol=lip+ c2+ c3+ c4+ c5+ c6+ c7+ c8+ c9+ c10+ c11+ c12+ c13+ c14+ c15+ ccc+ ccdans;
+cl=200000;}
+} 
+
+cwl=Math.min(cwol,cl);
+
+var ccder;
+ccder=Number(document.d.ccder.value);
+
+var dans;
+dans=cwl+ccder;
+document.d.dans.value = dans;
+
+document.d.steps.value = "Computation of Deduction from Gross Total Income"+
+"\n\nDeductions: "
++"\n\n―→Under Section 80C : "
++"\n\n◉Life insurance premium = "+lip
++"\n\n◉Amount paid for a contract of annuity on the life of self, spouse or children = "+c2
++"\n\n◉Statutory Provident Fund = "+c3
++"\n\n◉Recognised Provident Fund = "+c4
++"\n\n◉Public Provident Fund = "+c5
++"\n\n◉Contribution in the name of self, spouse or children for participation in the ULIP of UTI or LIC Mutual Fund = "+c6
++"\n\n◉Contribution to Pension fund set up by any notified mutual fund like UTI, NHB = "+c7
++"\n\n◉Subscription to National Savings Certificates (NSC) VIII Issue and IX Issue = "+c8
++"\n\n◉Subscription to any such security of the Central Government or any such deposit scheme notified by the Government = "+c9
++"\n\n◉Subscription to the bonds issued by NABARD = "+c10
++"\n\n◉Repayment of loan taken for construction or purchase of house property = "+c11
++"\n\n◉Deposit in Five Yer Post Office Time Deposit Account = "+c12
++"\n\n◉Deposit in Senior Citizen Savings Scheme, 2004 = "+c13
++"\n\n◉Tution fee paid for full time education of two children in India = "+c14
++"\n\n◉Investment made under Sukanya Samridhi Account for deposit for girl child (maximum for 2 girl children) = "+c15
++"\n\n\n\nUnder Section 80CCC : "
++"\n\n◉Contribution to pension fund = "
++"\n\n\n\n―→Under Section 80CCD(1) : "
++"\n\n◉Contribution to pension scheme of Central Government or any other employer = "+ ccd
++"\n\n―→But limited to (10% of Salary for salaried assessee or 20% of GTI for other assessee) = "+ ccdans
++"\n\n\n\n―→Total of the above = "+ cwol
++"\n\n―→But limited under section CCE = 150000"
++"\n\n―→Additional deduction under section CCD(1B) = "+ (cl-150000)
++"\n\n―→Total deduction (u/s 80C,80CCC, 80CCD(1)) = "+ (dans-ccder)
++"\n\n\n\n―→Under section 80 CCD(2) : "
++"\n\n◉Employer's contribution = "+ ccder
++"\n\n\n\n―→Total deduction (u/s 80C,80CCC, 80CCD(1),80CCD(2)) = "+dans
+;
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 50%;}
+select {font-size: 2vw; width: 60%;}
+textarea {font-size: 2vw; width: 100%; white-space:  overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #949192; white-space: nowrap;  font-size: 3vw;">Computation of Deduction Under Section 80D</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="d">
+
+<tr>
+<th> Type of Individual : </th>
+<td>
+<select name="cit"><option>Individual other than Senior Citizen</option><option>Senior Citizen</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Disability (if any) : </th>
+<td>
+<select name="dis"><option>No Disability</option><option>Normal Disability</option><option>Severe Disability</option></select></td>
+</tr>
+
+<tr>
+<th> Gross Total Income : </th>
+<td>
+<INPUT Type="text" Name="gti">
+</td>
+</tr>
+
+<tr>
+<th> Salary (if any) : </th>
+<td>
+<INPUT Type="text" Name="s">
+</td>
+</tr>
+
+<tr>
+<th> Long-Term Capital Gain (if any) : </th>
+<td>
+<INPUT Type="text" Name="ltcg">
+</td>
+</tr>
+
+<tr>
+<th> Short-Term Capital Gain - Section 111A (if any) : </th>
+<td>
+<INPUT Type="text" Name="stcgs">
+</td>
+</tr>
+
+<tr>
+<th> Casual Income (gross) (if any) : </th>
+<td>
+<INPUT Type="text" Name="ci">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"></th>
+</tr>
+
+<tr>
+<th> Medical Insurance Premium (For assessee, spouse, dependent children of the assessee) <br> (mode of payment should be other than cash) : </th>
+<td>
+Premium amount paid : <INPUT Type="text" Name="mip1">
+</td>
+</tr>
+
+<tr>
+<th> Medical Insurance Premium (For parents of the assessee) <br> (mode of payment should be other than cash) : </th>
+<td>
+Premium amount paid for Parent 1 : <INPUT Type="text" Name="mip21"><br><br>Age of Parent 1 : <select name="sc1"><option>Senior Citizen</option><option>Not a Senior Citizen</option></select><br><br><br> 
+Premium amount paid for Parent 2 : <INPUT Type="text" Name="mip22"><br><br>Age of Parent 2 : <select name="sc2"><option>Senior Citizen</option><option>Not a Senior Citizen</option></select>
+</td>
+</tr>
+
+<tr>
+<th> Medical expenses incurred for senior citizen only <br> (mode of payment should be other than cash) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="mip23">
+</td>
+</tr>
+
+<tr>
+<th> Preventive Health Check-Up of the assessee or his family or his parents <br> (any mode of payment) : </th>
+<td>
+Amount paid : <INPUT Type="text" Name="mip3">
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="D()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Deductions : </th>
+<td>
+<INPUT Type="text" Name="dans">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="30" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function D()
+{
+var mip1scl, mip1l, mip1, mip21, mip22, mip23, mip21scl, mip22scl, mip21l, mip22l, mip2l, mip2scl, mip1scl, mip1l;
+mip1=Number(document.d.mip1.value);
+mip21=Number(document.d.mip21.value);
+mip22=Number(document.d.mip22.value);
+mip23=Number(document.d.mip23.value);
+
+if (document.d.cit.value=="Senior Citizen")
+{mip1scl=Math.min(mip1,50000); mip1l=0;} else {mip1l=Math.min(mip1,25000); mip1scl=0;}
+
+if (document.d.sc1.value=="Senior Citizen"){mip21scl=Math.min(mip21,50000); mip21l=0;} else {mip21l=Math.min(mip21,25000); mip21scl=0;}
+if (document.d.sc2.value=="Senior Citizen"){mip22scl=Math.min(mip22,50000); mip22l=0;} else {mip22l=Math.min(mip22,25000); mip22scl=0;}
+mip23=Number(document.d.mip23.value);
+mip2scl=Math.min(50000, (mip21scl+mip22scl+mip23));
+mip2l=Math.min(25000,(mip21l+mip22l));
+
+var mip3, mip3l, mip01, mip02;
+mip3=Number(document.d.mip3.value);
+mip3l=Math.min(5000,mip3);
+mip01=Math.min(25000,(mip2l+mip1l+mip3l));
+mip02=Math.min(50000,(mip2scl+mip1scl));
+document.d.dans.value = mip01+mip02;
+
+document.d.steps.value = "Computation of Deduction from Gross Total Income"+
+"\n\nDeductions: "
++"\n\n―→Under Section 80D : "
++"\n\n◉Medical Insurance Premium (For assessee, spouse, dependent children of the assessee) = "+ mip1
++"\n\n◉Preventive Health Check-Up of the assessee or his family or his parents = "+ mip3
++"\n\n―→Maximum deduction for self and family = "+ mip01
++"\n\n\n\n◉Medical Insurance Premium (For parents of the assessee) = "+ (mip21+mip22)
++"\n\n◉Medical expenses incurred for senior citizen = "+ mip23
++"\n\n―→Maximum deduction for parents = "+ mip02
++"\n\n\n\n―→Total deduction under section 80D = "+ (mip01+mip02)
+;
+
+}
+</script>
+</body>
+</html>
