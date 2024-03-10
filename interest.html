@@ -1,0 +1,127 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 19%;}
+select {font-size: 2vw; width: 15%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #d16002; white-space: nowrap;  font-size: 3vw;">Computation of Income from Interest on Securities with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="ifos">
+
+<tr>
+<th>Interest on Securities  : </th>
+<td><br>
+Interest income 1 : <INPUT Type="text" Name="ifs1"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs10"> <br><br>
+Interest income 2 : <INPUT Type="text" Name="ifs2"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs20"> <br><br>
+Interest income 3 : <INPUT Type="text" Name="ifs3"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs30"> <br><br>
+Interest income 4 : <INPUT Type="text" Name="ifs4"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs40"> <br><br>
+Interest income 5 : <INPUT Type="text" Name="ifs5"> <br> Interest on loan, collection charges, etc paid : <INPUT Type="text" Name="ifs50"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="IFOS()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Income from Other Sources : </th>
+<td>
+<INPUT Type="text" Name="ifos">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="30" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function IFOS()
+{
+var ifs1, ifs10, ifs2, ifs20, ifs3, ifs30, ifs4, ifs40, ifs5, ifs50;
+
+ifs10=Number(document.ifos.ifs10.value);
+if (Number(document.ifos.ifs1.value)>5000) {ifs1=Number(document.ifos.ifs1.value)*100/90-(ifs10);} else {ifs1=Number(document.ifos.ifs1.value)-(ifs10);}
+
+ifs20=Number(document.ifos.ifs20.value);
+if (Number(document.ifos.ifs2.value)>5000) {ifs2=Number(document.ifos.ifs2.value)*100/90-(ifs20);} else {ifs2=Number(document.ifos.ifs2.value)-(ifs20);}
+
+ifs30=Number(document.ifos.ifs30.value);
+if (Number(document.ifos.ifs3.value)>5000) {ifs3=Number(document.ifos.ifs3.value)*100/90-(ifs30);} else {ifs3=Number(document.ifos.ifs3.value)-(ifs30);}
+
+ifs40=Number(document.ifos.ifs40.value);
+if (Number(document.ifos.ifs4.value)>5000) {ifs4=Number(document.ifos.ifs4.value)*100/90-(ifs40);} else {ifs4=Number(document.ifos.ifs4.value)-(ifs40);}
+
+ifs50=Number(document.ifos.ifs50.value);
+if (Number(document.ifos.ifs5.value)>5000) {ifs5=Number(document.ifos.ifs5.value)*100/90-(ifs50);} else {ifs5=Number(document.ifos.ifs5.value)-(ifs50);}
+
+ifs = ifs1+ ifs2+ ifs3+ ifs4+ ifs5;
+
+document.ifos.ifos.value = ifs;
+
+document.ifos.steps.value = "Computation of Income from Interest on Securities"
++"\n\n"
++"\n\nInterest on security 1 (gross) = "+ (ifs1+ifs10) +"\n Less:Interest on loan, and reasonable expenses = "+ifs10+"\nIncome = "+ifs1
++"\n\nInterest on security 2 (gross) = "+ (ifs2+ifs20) +"\n Less:Interest on loan, and reasonable expenses = "+ifs20+"\nIncome = "+ifs2
++"\n\nInterest on security 3 (gross) = "+ (ifs3+ifs30) +"\n Less:Interest on loan, and reasonable expenses = "+ifs30+"\nIncome = "+ifs3
++"\n\nInterest on security 4 (gross) = "+ (ifs4+ifs40) +"\n Less:Interest on loan, and reasonable expenses = "+ifs40+"\nIncome = "+ifs4
++"\n\nInterest on security 5 (gross) = "+ (ifs5+ifs50) +"\n Less:Interest on loan, and reasonable expenses = "+ifs50+"\nIncome = "+ifs5
++"\n\n"
++"\n\nIncome from Interest on Securities = "+ ifs
+;
+
+}
+</script>
+</body>
+</html>

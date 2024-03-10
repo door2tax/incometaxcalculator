@@ -1,0 +1,168 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 19%;}
+select {font-size: 2vw; width: 15%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #fa8128; white-space: nowrap;  font-size: 3vw;">Computation of Income from Other Sources with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="ifos">
+
+<tr>
+<th>Casual Incomes : </th>
+<td><br> 
+Winnings from lotteries : <INPUT Type="text" Name="ci1"> &nbsp; <select name="ci11"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from crossword puzzles : <INPUT Type="text" Name="ci2"> &nbsp; <select name="ci22"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from card games : <INPUT Type="text" Name="ci3"> &nbsp; <select name="ci33"><option>Gross</option><option>Net</option></select> <br><br>
+Winnings from other games : <INPUT Type="text" Name="ci4"> &nbsp; <select name="ci44"><option>Gross</option><option>Net</option></select> <br><br>
+Betting, Gambling games : <INPUT Type="text" Name="ci5"> &nbsp; <select name="ci55"><option>Gross</option><option>Net</option></select> <br><br><br>
+Winnings from horse race : <INPUT Type="text" Name="cihr"> &nbsp; <select name="cihr0"><option>Gross</option><option>Net</option></select> <br><br>
+Expenses in respect of owning and maintaining race horses : <INPUT Type="text" Name="cihre"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="IFOS()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Income from Other Sources : </th>
+<td>
+<INPUT Type="text" Name="ifos">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="25" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function IFOS()
+{
+var ci1;
+if (document.ifos.ci11.value=="Gross") 
+{ci1=Number(document.ifos.ci1.value);}
+else if (document.ifos.ci11.value=="Net") 
+{
+if (Number(document.ifos.ci1.value)>10000){ci1=Number(document.ifos.ci1.value)*100/70;}
+else {ci1=Number(document.ifos.ci1.value);}
+}
+
+var ci2;
+if (document.ifos.ci22.value=="Gross") 
+{ci2=Number(document.ifos.ci2.value);}
+else if (document.ifos.ci22.value=="Net") 
+{
+if (Number(document.ifos.ci2.value)>10000){ci2=Number(document.ifos.ci2.value)*100/70;}
+else {ci2=Number(document.ifos.ci2.value);}
+}
+
+var ci3;
+if (document.ifos.ci33.value=="Gross") 
+{ci3=Number(document.ifos.ci3.value);}
+else if (document.ifos.ci33.value=="Net") 
+{
+if (Number(document.ifos.ci3.value)>10000){ci3=Number(document.ifos.ci3.value)*100/70;}
+else {ci3=Number(document.ifos.ci3.value);}
+}
+
+var ci4;
+if (document.ifos.ci44.value=="Gross") 
+{ci4=Number(document.ifos.ci4.value);}
+else if (document.ifos.ci44.value=="Net") 
+{
+if (Number(document.ifos.ci4.value)>10000){ci4=Number(document.ifos.ci4.value)*100/70;}
+else {ci4=Number(document.ifos.ci4.value);}
+}
+
+var ci5;
+if (document.ifos.ci55.value=="Gross") 
+{ci5=Number(document.ifos.ci5.value);}
+else if (document.ifos.ci55.value=="Net") 
+{
+if (Number(document.ifos.ci5.value)>10000){ci5=Number(document.ifos.ci5.value)*100/70;}
+else {ci5=Number(document.ifos.ci5.value);}
+}
+
+var cihre, cihr;
+cihre = Number(document.ifos.cihre.value);
+if (document.ifos.cihr0.value=="Gross") 
+{cihr=(Number(document.ifos.cihr.value))-cihre;}
+else if (document.ifos.cihr0.value=="Net") 
+{
+if (Number(document.ifos.cihr.value)>10000){cihr=(Number(document.ifos.cihr.value)*100/70)-cihre;}
+else {cihr=(Number(document.ifos.cihr.value))-cihre;}
+}
+
+ifs = cihr+ ci5+ ci4+ ci3+ ci2+ ci1;
+
+document.ifos.ifos.value = ifs;
+
+document.ifos.steps.value = "Computation of Casual Income"
++"\n\n"
++"\n\nWinnings from lotteries = "+ ci1
++"\n\nWinnings from crossword puzzles = "+ ci2
++"\n\nWinnings from card games = "+ ci3
++"\n\nWinnings from other games = "+ ci4
++"\n\nBetting, Gambling games = "+ ci5
++"\n\nWinnings from horse race = "+ (cihr+cihre) + "\n Less:Expenses for owning and maintaining horses = "+cihre+"\nIncome = "+cihr
++"\n\n"
++"\n\nCasual Incomes = "+ ifs
+;
+
+}
+</script>
+</body>
+</html>

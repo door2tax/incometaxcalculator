@@ -1,0 +1,141 @@
+<html>
+<style>
+
+body {font-size: 3vw;}
+input {font-size: 2vw; width: 19%;}
+select {font-size: 2vw; width: 15%;}
+textarea {font-size: 2vw; width: 100%; white-space: nowrap; overflow: auto; text-overflow: ellipsis;}
+
+table 
+{border-collapse: collapse;
+width: 100%;}
+
+th, td 
+{border: 2px solid #ddd;
+padding: 10px;
+text-align: left;}
+
+th 
+{background-color: #f2f2f2;}
+
+</style>
+
+<body>
+
+<div style="text-align:center;"><img style="width: 100%;" src="bannerlogo.jpg"></div>
+
+<a style="text-decoration: none;" href="homepage.html"><div style=" margin-top: 10px; margin-bottom: 10px; text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 5px; padding-bottom: 5px;  color: white; background-color: black; white-space: nowrap;  font-size: 3vw; ">HOME</div></a>
+
+<div style="text-align:center; font-family: 'Times New Roman', Times, serif; width: 100%; padding-top: 40px; padding-bottom: 40px;  color: white; background-color: #ed7117; white-space: nowrap;  font-size: 3vw;">Computation of Income from Dividend on Securities with Steps</div>
+
+<h3 style="margin-bottom: 20px; margin-left: 10px; margin-bottom: 10px; font-size: 2vw;">Enter the details : </h3>
+
+<table style="width:100%; font-size: 2vw;">
+
+<FORM Name="ifos">
+
+<tr>
+<th>Dividend on Securities/Income from units of Mutual Fund  :
+<br> (Amount received) </th>
+<td><br>
+Dividend/Income 1 : <INPUT Type="text" Name="dfs1"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs10"> <br><br> 
+Dividend/Income 2 : <INPUT Type="text" Name="dfs2"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs20"> <br><br>
+Dividend/Income 3 : <INPUT Type="text" Name="dfs3"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs30"> <br><br>
+Dividend/Income 4 : <INPUT Type="text" Name="dfs4"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs40"> <br><br>
+Dividend/Income 5 : <INPUT Type="text" Name="dfs5"> <br> Interest on loan, taken to buy this security/unit : <INPUT Type="text" Name="dfs50"> <br><br>
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: green;"><INPUT Type="button" Value="Calculate" onClick="IFOS()" style="width: 100%;"></div>
+<br>
+<div style="text-align:center; padding: 10px 10px 10px 10px; background-color: red;"><INPUT Type="reset" Value="Reset" style="width: 100%;"></div>
+<br>
+</th>
+</tr>
+
+<tr>
+<th>Income from Other Sources : </th>
+<td>
+<INPUT Type="text" Name="ifos">
+</td>
+</tr>
+
+<tr>
+<th>Steps : </th>
+<td>
+<textarea name="steps" rows="30" cols="100">
+</textarea>
+</td>
+</tr>
+
+</form>
+</table>
+
+<br>
+<hr>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Contact Us</h2>
+<p style="margin-left: 20px; text-align: justify; font-family: 'Times New Roman', Times, serif; font-size: 3vw;">Have a bug to report, a suggestion to share, or just want to get in touch? We value your feedback! Reach out to us <a style=" text-decoration: none;" href="mailto:imdvme@gmail.com" target="_blank">imdvme@gmail.com</a><br><br> Feel free to contact us with any question or concerns. We appreciate your input in making our website better!</p></div>
+
+<div style="padding: 20px; box-sizing: border-box; text-align:center; font-family: 'Times New Roman', Times, serif; font-size: 3vw;  float: left;  width: 50%;">
+<h2 style="margin-top: 10%;">Developed By</h2>
+<a href="mailto:imdvme@gmail.com" target="_blank"><img style="margin-left: 20px; width: 70%; " src="contactuslogo.png"></a>
+</div>
+
+
+<SCRIPT Language="JavaScript">
+
+function IFOS()
+{
+var dfs1, dfs11, dfs111, dfs10, dfs2, dfs22, dfs222, dfs20, dfs3, dfs33, dfs333, dfs30, dfs4, dfs44, dfs444, dfs40, dfs5, dfs55, dfs555, dfs50;
+
+if (Number(document.ifos.dfs1.value)>5000)
+{dfs11=Number(document.ifos.dfs1.value)*20/90;} else {dfs11=Number(document.ifos.dfs1.value)*20/100;}
+dfs111=Number(document.ifos.dfs10.value);
+dfs10=Math.min(dfs11,dfs111);
+if (Number(document.ifos.dfs1.value)>5000) {dfs1=Number(document.ifos.dfs1.value)*100/90-(dfs10);} else {dfs1=Number(document.ifos.dfs1.value)-(dfs10);}
+
+if (Number(document.ifos.dfs2.value)>5000)
+{dfs22=Number(document.ifos.dfs2.value)*20/90;} else {dfs22=Number(document.ifos.dfs2.value)*20/100;}
+dfs222=Number(document.ifos.dfs20.value);
+dfs20=Math.min(dfs22,dfs222);
+if (Number(document.ifos.dfs2.value)>5000) {dfs2=Number(document.ifos.dfs2.value)*100/90-(dfs20);} else {dfs2=Number(document.ifos.dfs2.value)-(dfs20);}
+
+if (Number(document.ifos.dfs3.value)>5000) 
+{dfs33=Number(document.ifos.dfs3.value)*20/90;} else {dfs33=Number(document.ifos.dfs3.value)*20/100;}
+dfs333=Number(document.ifos.dfs30.value);
+dfs30=Math.min(dfs33,dfs333);
+if (Number(document.ifos.dfs3.value)>5000) {dfs3=Number(document.ifos.dfs3.value)*100/90-(dfs30);} else {dfs3=Number(document.ifos.dfs3.value)-(dfs30);}
+
+if (Number(document.ifos.dfs4.value)>5000) 
+{dfs44=Number(document.ifos.dfs4.value)*20/90;} else {dfs44=Number(document.ifos.dfs4.value)*20/100;}
+dfs444=Number(document.ifos.dfs40.value);
+dfs40=Math.min(dfs44,dfs444);
+if (Number(document.ifos.dfs4.value)>5000) {dfs4=Number(document.ifos.dfs4.value)*100/90-(dfs40);} else {dfs4=Number(document.ifos.dfs4.value)-(dfs40);}
+
+if (Number(document.ifos.dfs5.value)>5000) 
+{dfs55=Number(document.ifos.dfs5.value)*20/90;} else {dfs55=Number(document.ifos.dfs5.value)*20/100;}
+dfs555=Number(document.ifos.dfs50.value);
+dfs50=Math.min(dfs55,dfs555);
+if (Number(document.ifos.dfs5.value)>5000) {dfs5=Number(document.ifos.dfs5.value)*100/90-(dfs50);} else {dfs5=Number(document.ifos.dfs5.value)-(dfs50);}
+
+ifs = dfs1+ dfs2+ dfs3+ dfs4+ dfs5;
+
+document.ifos.ifos.value = ifs;
+
+document.ifos.steps.value = "Computation of Income from Dividend on Securities"+"\n\nDividend on security 1 (gross) = "+ (dfs1+dfs10) +"\n Less:Interest on loan upto 20% of income = "+dfs10+"\nIncome = "+dfs1 
++"\n\nDividend on security 2 (gross) = "+ (dfs2+dfs20) +"\n Less:Interest on loan upto 20% of income = "+dfs20+"\nIncome = "+dfs2
++"\n\nDividend on security 3 (gross) = "+ (dfs3+dfs30) +"\n Less:Interest on loan upto 20% of income = "+dfs30+"\nIncome = "+dfs3
++"\n\nDividend on security 4 (gross) = "+ (dfs4+dfs40) +"\n Less:Interest on loan upto 20% of income = "+dfs40+"\nIncome = "+dfs4
++"\n\nDividend on security 5 (gross) = "+ (dfs5+dfs50) +"\n Less:Interest on loan upto 20% of income = "+dfs50+"\nIncome = "+dfs5
++"\n\n"
++"\n\nIncome from Dividend on Securities = "+ ifs
+;
+
+}
+</script>
+</body>
+</html>
